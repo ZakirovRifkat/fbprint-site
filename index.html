@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f5f1">
+<title>FB-print — самоклеящиеся этикетки на заказ</title>
+<meta name="description" content="Типография полного цикла FB-print: самоклеящиеся этикетки цифровой и флексопечатью. Любые материалы, лакирование, вырубка любой формы, цветопроба до тиража. Работаем по всей России.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="FB-print">
+<meta property="og:title" content="FB-print — самоклеящиеся этикетки на заказ">
+<meta property="og:description" content="Типография полного цикла: цифровая и флексопечать этикеток, любые материалы, вырубка любой формы, цветопроба до тиража.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;600;700&amp;family=Golos+Text:wght@400;500;600;700&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script>
+  /* Тема до первой отрисовки: сохранённый выбор, иначе системная настройка */
+  (function () {
+    var theme = null;
+    try { theme = localStorage.getItem('fb-theme'); } catch (e) {}
+    if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#181143');
+    }
+  })();
+</script>
+</head>
+<body id="top">
+
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+
+<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="reg" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width="1"/>
+      <circle cx="12" cy="12" r="2.6" fill="currentColor"/>
+      <path d="M12 0v24M0 12h24" stroke="currentColor" stroke-width="1"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="cmyk-bar" aria-hidden="true">
+  <span></span><span></span><span></span><span></span>
+</div>
+
+<header class="site-header" data-header>
+  <div class="shell site-header__inner">
+    <a class="brand" href="#top">
+      <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="104" height="46">
+      <span class="brand__text">
+        <span class="brand__name">FB-print</span>
+        <span class="brand__tagline">Самоклеящиеся этикетки</span>
+      </span>
+      <span class="visually-hidden">FB-print — на главную</span>
+    </a>
+
+    <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-menu">
+      <span class="burger__bars" aria-hidden="true"></span>
+    </button>
+
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="Разделы сайта">
+        <a href="#tech">Технологии</a>
+        <a href="#materials">Материалы</a>
+        <a href="#services">Услуги</a>
+        <a href="#products">Продукция</a>
+        <a class="site-nav__order" href="#order">Как заказать</a>
+      </nav>
+      <a class="btn btn--ink site-menu__cta" href="#order"><span>Отправить макет<span class="site-menu__cta-tail"> на&nbsp;расчёт</span></span></a>
+    </div>
+
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Тёмная тема" title="Тёмная тема" data-theme-toggle hidden>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="shell hero__inner">
+      <div class="hero__text">
+        <h1 class="hero__title">Ваши идеи&nbsp;—<br>наши этикетки</h1>
+        <p class="lead">Типография полного цикла: печатаем самоклеящиеся этикетки любой сложности цифровой и&nbsp;флексопечатью. От&nbsp;первых партий стартапов до&nbsp;серийных тиражей крупных брендов&nbsp;— помогаем продуктам выделяться на&nbsp;полке и&nbsp;продаваться.</p>
+
+        <div class="hero__actions">
+          <a class="btn btn--ink btn--lg" href="#order">
+            Отправить макет на расчёт
+            <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="link-underline hero__link" href="#services">Как мы печатаем</a>
+        </div>
+
+        <p class="hero__mail">Или сразу на почту: <a class="link-underline" href="mailto:info@fb-print.ru">info@fb-print.ru</a></p>
+
+        <ul class="chips">
+          <li class="chip"><svg class="icon-check" viewBox="0 0 24 24" width="15" height="15" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Срочные заказы</li>
+          <li class="chip"><svg class="icon-check" viewBox="0 0 24 24" width="15" height="15" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Тиражи любого объёма</li>
+          <li class="chip"><svg class="icon-check" viewBox="0 0 24 24" width="15" height="15" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Поможем с макетом</li>
+          <li class="chip"><svg class="icon-check" viewBox="0 0 24 24" width="15" height="15" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Работаем по всей России</li>
+        </ul>
+      </div>
+
+      <figure class="proof hero__art" data-proof>
+        <div class="proof__sheet">
+          <div class="proof__label" data-label tabindex="0" role="img" aria-label="Пробный оттиск этикетки FB-print: голубая, пурпурная и жёлтая краски перекрываются, логотип напечатан фирменными чернилами. Стрелки на клавиатуре двигают лупу.">
+            <span class="crop crop--tl" aria-hidden="true"></span>
+            <span class="crop crop--tr" aria-hidden="true"></span>
+            <span class="crop crop--bl" aria-hidden="true"></span>
+            <span class="crop crop--br" aria-hidden="true"></span>
+            <svg class="reg proof__reg proof__reg--l" width="18" height="18" aria-hidden="true"><use href="#reg"/></svg>
+            <svg class="reg proof__reg proof__reg--r" width="18" height="18" aria-hidden="true"><use href="#reg"/></svg>
+            <svg class="label" data-art viewBox="0 0 480 300" aria-hidden="true">
+              <defs>
+                <symbol id="fb-mark" viewBox="2 15.5 82 64.5"><path d="M49.0777 16.28C48.0896 16.3331 44.888 16.7046 44.8221 16.7842C44.7958 16.8108 44.809 17.1425 44.8617 17.514C44.9539 18.1641 44.9671 18.1906 45.3096 18.1243C47.6285 17.6467 52.635 17.5936 55.3096 18.0182C58.9855 18.6152 61.9104 19.5175 64.888 20.9637C77.8788 27.2926 84.6113 41.2109 81.2121 54.7577C78.8801 64.0852 71.7391 71.9665 62.3188 75.5887C55.3228 78.2689 47.3386 78.4281 40.1186 76.0133C30.0659 72.6432 22.332 64.4302 19.9605 54.6117C19.776 53.8953 19.6179 53.2717 19.5784 53.2451C19.5389 53.2053 19.2227 53.2186 18.8538 53.2717C18.2082 53.3645 18.1818 53.3778 18.2609 53.7095C19.0119 56.9071 19.7628 59.0831 20.975 61.4581C24.9934 69.3925 32.3452 75.3499 41.2253 77.8708C52.1607 80.9888 63.9262 78.4679 72.5955 71.1439C77.7602 66.7919 81.6206 60.2772 82.9249 53.7228C83.4256 51.2416 83.5837 49.3443 83.4914 46.7835C83.2806 40.3219 81.2385 34.5503 77.2991 29.2828C72.3847 22.7018 64.4269 17.9784 56.1528 16.7179C54.3346 16.4392 51.2516 16.1739 50.4084 16.2137C50.1054 16.227 49.5125 16.2535 49.0777 16.28Z" fill="currentColor"/> <path d="M32.4638 19.2389C32.2398 19.3185 31.9763 19.4645 31.8841 19.5706C31.7918 19.6768 31.5942 19.7696 31.4361 19.7696C30.8827 19.7696 28.7747 21.521 28.274 22.3967C28.0632 22.7683 27.7602 23.1265 27.5889 23.2061C27.4045 23.2857 27.22 23.5511 27.1278 23.8828C27.0356 24.1747 26.7721 24.6391 26.5481 24.9177C25.8762 25.7005 25.5599 26.4435 25.5863 27.1335C25.5995 27.6775 25.5468 27.7969 25.0461 28.3143C24.5982 28.7655 24.4664 29.0176 24.4005 29.535C24.3215 30.0657 24.2556 30.1852 24.0448 30.1852C23.8076 30.1852 23.7813 30.079 23.7418 29.0839C23.7154 28.4868 23.7681 27.7703 23.834 27.5183C23.9921 26.9477 23.8076 25.1167 23.5178 24.2676C23.1225 23.153 22.3715 22.7417 21.4493 23.1265C20.83 23.3919 20.7246 23.7634 21.0672 24.3339C21.3966 24.8646 21.4229 25.8465 21.1462 27.3325C20.6588 29.9729 19.9868 33.0776 19.6706 34.0993C19.4862 34.7229 19.3017 35.6782 19.2622 36.2222C19.2095 37.0846 19.249 37.2969 19.4862 37.6817C19.776 38.1726 19.8419 38.6768 19.6311 38.8095C19.5652 38.8493 19.4993 39.1014 19.4993 39.3667C19.4993 39.6321 19.3676 40.0434 19.2227 40.2955C18.946 40.7333 18.9328 40.866 19.0119 43.0287C19.1041 45.5099 19.3544 47.0092 19.7497 47.4205C19.9473 47.6062 20.2503 47.6859 20.975 47.7389C21.8841 47.792 21.9763 47.7787 22.3584 47.447C22.9381 46.9561 23.2938 45.8947 23.4387 44.2759C23.5178 43.5329 23.6364 42.7103 23.7022 42.4582C23.7813 42.2061 23.8472 41.2906 23.8472 40.4282C23.8472 39.1677 23.8999 38.7697 24.0975 38.3716C24.3478 37.8674 24.4401 36.9917 24.4005 35.6782C24.3742 35.174 24.4532 34.7494 24.6509 34.3115C24.8353 33.8737 24.9144 33.4757 24.8748 33.0245C24.8485 32.6 24.888 32.3744 24.9802 32.3744C25.2174 32.3744 25.2701 31.9498 25.2042 30.7424L25.1252 29.6146L25.942 28.5664C26.5217 27.8102 26.7457 27.4121 26.7457 27.1069C26.7457 26.8947 26.8643 26.5497 27.0092 26.3639C27.1541 26.1782 27.2727 25.9659 27.2727 25.873C27.2727 25.7934 27.3518 25.6342 27.4572 25.5413C27.5494 25.4352 27.668 24.9973 27.7207 24.5595C27.7997 23.8164 27.8393 23.7501 28.1291 23.7501C28.3136 23.7501 28.6825 23.5511 28.9723 23.2857C29.249 23.0336 29.5389 22.8213 29.6179 22.8213C29.7101 22.8213 29.8551 22.6621 29.9605 22.4498C30.1713 22.0385 31.6733 21.3751 32.6614 21.2557C33.4387 21.1628 33.5968 21.4016 33.5968 22.5692C33.5968 23.4184 33.2016 25.0769 32.9117 25.4352C32.8327 25.5413 32.8195 25.9659 32.8722 26.5099C32.9776 27.6111 33.0698 27.4784 30.3821 30.225C29.0909 31.5518 28.2872 32.2417 27.7602 32.5336C27.3386 32.7592 26.4822 33.4359 25.8498 34.0329C24.7694 35.0678 24.7036 35.1474 24.7167 35.6649C24.7431 36.6865 25.6258 37.5755 26.3636 37.35C26.5349 37.2969 27.7602 36.1293 29.1041 34.7627C31.2912 32.5602 31.6601 32.2284 32.5692 31.7773C33.4519 31.3395 33.7286 31.2731 34.5455 31.2599C36.4427 31.2333 37.4045 31.8039 37.5231 33.0113C37.5758 33.5818 37.5362 33.6879 37.2727 33.887C35.7312 34.975 35.0329 35.5588 33.6627 36.9386C30.7246 39.9107 29.4466 41.954 28.2477 45.5762C27.6416 47.4205 27.6285 47.4338 27.7866 48.2962C28.0237 49.5965 28.419 50.167 29.4071 50.6579C30.7246 51.3081 30.9354 51.3611 31.4888 51.2152C32.2266 51.0162 33.8472 49.8751 34.6772 48.9729C35.6522 47.9114 36.996 45.9079 37.3781 44.9261C37.5362 44.4882 37.7997 44.0106 37.9315 43.8646C38.0764 43.7054 38.2477 43.3737 38.3267 43.1216C38.3926 42.8695 38.5771 42.3255 38.722 41.9275C38.8669 41.5294 38.9855 41.0252 38.9987 40.8129C38.9987 40.6007 39.1173 40.2291 39.2754 39.9903C39.4862 39.6321 39.552 39.2606 39.6047 38.1593C39.6574 36.5937 39.9736 35.3863 40.5007 34.6963C40.7115 34.431 41.1858 34.0727 41.6996 33.8339C42.1607 33.6083 42.635 33.3297 42.7536 33.2236C43.1884 32.7857 42.8458 31.5783 42.2925 31.5783C42.1476 31.5783 41.581 31.7243 41.0277 31.8967C40.303 32.1356 39.9341 32.1886 39.7101 32.109C39.5389 32.0427 38.9328 31.5385 38.3531 31.0078C37.1146 29.8402 36.7194 29.6942 34.6113 29.6677C33.2279 29.6544 33.1357 29.6412 33.0962 29.3891C33.0698 29.19 33.1884 29.0574 33.531 28.8849C33.8603 28.7257 33.9921 28.5797 33.9921 28.3541C33.9921 28.1817 34.137 27.903 34.3215 27.7305C34.5059 27.5581 34.6509 27.3192 34.6509 27.1865C34.6509 27.0671 34.8485 26.7222 35.0856 26.4303C35.7444 25.6342 36.2846 24.0155 36.1924 23.0867C36.0474 21.7599 35.8234 20.9372 35.5072 20.6453C35.336 20.4861 35.1779 20.2075 35.1515 20.035C35.0725 19.4114 33.4387 18.9338 32.4638 19.2389ZM37.4045 37.7347C37.6548 38.69 37.5231 39.1014 36.2978 41.065C35.5072 42.3388 35.4282 42.5245 35.5599 42.8032C35.7839 43.3074 35.7444 43.5064 35.3096 44.0106C35.0988 44.2494 34.9144 44.5811 34.9144 44.7271C34.9144 44.8863 34.6377 45.271 34.3083 45.5895C33.8472 46.0539 33.7286 46.2396 33.7945 46.4652C33.8735 46.6907 33.7154 46.903 32.9249 47.646C31.9236 48.5881 31.4493 48.8269 30.5534 48.8269C30.2372 48.8269 30.0395 48.7606 29.9868 48.6146C29.7101 47.8716 30.1581 45.762 30.9618 44.13C31.6074 42.7766 32.2134 41.8611 33.4651 40.322C34.4796 39.0616 36.8511 36.8458 37.0751 36.9254C37.1541 36.9519 37.2991 37.3102 37.4045 37.7347Z" fill="currentColor"/> <path d="M11.9895 20.1277C11.6601 20.1542 10.6061 20.3002 9.64426 20.4329C8.41896 20.6186 7.33859 20.6982 6.02107 20.6717C4.03161 20.6451 3.22792 20.7911 2.80631 21.2555C2.60869 21.4678 2.60869 21.6137 2.74044 22.5292C2.81949 23.0865 2.92489 25.1563 2.97759 27.1333C3.03029 29.2429 3.13569 31.0607 3.22792 31.5648C3.35967 32.1619 3.37285 32.5069 3.28062 32.759C3.20157 32.958 3.17522 33.502 3.22792 34.0593C3.2938 34.7625 3.25427 35.2136 3.09617 35.7576C2.89854 36.4741 2.89854 36.5271 3.14887 36.9252C3.38602 37.31 3.38602 37.3896 3.21475 37.7213C3.05664 38.0132 3.01712 38.6766 3.03029 40.9985C3.03029 42.6039 3.09617 44.0634 3.16205 44.2625C3.2411 44.4482 3.2938 45.0055 3.2938 45.5097C3.2938 46.1731 3.38602 46.6905 3.64953 47.3805C3.91303 48.1235 3.96573 48.3756 3.84716 48.5614C3.64953 48.8798 3.78128 48.9727 4.18971 48.8134C4.42687 48.7206 4.66402 48.7338 5.03293 48.8931C5.44136 49.0523 5.66534 49.0655 6.166 48.9461C7.78655 48.5879 8.49801 47.3938 8.19498 45.5627C8.06323 44.7534 7.85243 40.8526 7.87878 39.6982C7.89195 39.2736 7.82608 39.2206 7.27272 39.2736C6.86429 39.3002 6.77206 38.9685 6.98286 38.0264C7.07509 37.5753 7.22002 36.8323 7.31224 36.3546C7.444 35.532 7.48352 35.4789 7.971 35.2269C8.43214 35.0013 8.85374 34.9615 11.1331 34.8951C14.2029 34.8155 14.361 34.7757 14.361 33.9266C14.361 33.2897 14.1107 32.9315 13.3992 32.5467C13.0303 32.3344 12.6482 32.3079 10.1186 32.3477L7.24637 32.3742L7.16732 32.0425C7.11461 31.8435 7.12779 30.9943 7.16732 30.1451C7.22002 29.296 7.25954 28.407 7.27272 28.1947C7.27272 27.9692 7.33859 27.0669 7.40447 26.178C7.48352 25.0236 7.47035 24.3868 7.36494 23.9489C7.27272 23.5641 7.25954 23.2855 7.33859 23.2059C7.6548 22.8875 9.15678 22.5292 11.2912 22.2771C13.3465 22.025 13.7549 22.0118 14.6509 22.1577C15.9289 22.37 16.5086 22.2108 16.7194 21.6005C16.7984 21.3749 16.8643 21.1095 16.8643 21.0034C16.8643 20.6982 16.0606 20.3134 15.2306 20.2471C13.7945 20.1144 12.5955 20.0746 11.9895 20.1277ZM5.53359 32.3742C5.53359 32.4405 5.48089 32.5069 5.40183 32.5069C5.33596 32.5069 5.27008 32.4405 5.27008 32.3742C5.27008 32.2946 5.33596 32.2415 5.40183 32.2415C5.48089 32.2415 5.53359 32.2946 5.53359 32.3742ZM6.77206 36.0362C6.89064 36.3546 6.86429 37.1905 6.71936 37.4161C6.60078 37.5886 6.57443 37.5886 6.45585 37.4161C6.31093 37.1905 6.2714 36.0495 6.41633 35.9168C6.56125 35.7708 6.67983 35.8107 6.77206 36.0362ZM5.55994 36.4475C5.63899 36.766 5.54676 37.0181 5.33596 37.0181C5.12515 37.0181 4.9934 36.6864 5.08563 36.421C5.19103 36.1556 5.49406 36.1689 5.55994 36.4475ZM5.66534 39.4727C5.66534 39.8574 5.45454 40.0167 5.34913 39.7248C5.24373 39.4461 5.38866 38.9817 5.54676 39.0746C5.61264 39.1277 5.66534 39.3002 5.66534 39.4727Z" fill="currentColor"/> <path d="M66.9697 38.5041C66.8906 38.597 66.7984 39.0614 66.7457 39.5125C66.7062 39.9769 66.6403 40.4147 66.5876 40.481C66.4822 40.6668 64.585 41.5292 64.2951 41.5292C63.9262 41.5292 63.9657 41.8609 64.361 42.0334C64.8221 42.2457 64.9539 42.2324 65.6785 41.914C66.0079 41.7681 66.3373 41.6752 66.3768 41.7282C66.4295 41.7813 66.4427 42.1794 66.4163 42.6305C66.3373 44.0104 66.3505 44.6472 66.4822 44.7136C66.6008 44.7799 66.6667 44.3553 66.6798 43.6123C66.6798 43.4133 66.7325 43.2806 66.7984 43.3204C66.8775 43.3735 66.9302 43.4929 66.9302 43.5991C66.9302 43.7052 67.0092 43.7848 67.1014 43.7848C67.2332 43.7848 67.3386 43.4266 67.444 42.6172C67.6416 41.2241 67.6811 41.1312 68.2609 40.8393C68.8142 40.5607 70.4875 40.0565 70.606 40.1228C70.8432 40.282 71.0145 39.9769 70.8959 39.6319C70.751 39.2604 70.5006 39.1808 70.2635 39.4196C70.1713 39.5125 70.0922 39.5125 70.0395 39.4196C69.9868 39.34 69.8287 39.3532 69.5916 39.4727C69.025 39.7513 68.1555 39.9769 67.9974 39.884C67.9183 39.8309 67.8524 39.539 67.8524 39.2206C67.8524 38.9154 67.7866 38.597 67.6943 38.5041C67.4835 38.2918 67.1278 38.3051 66.9697 38.5041Z" fill="currentColor"/> <path d="M55.2964 39.1013C55.1383 39.2605 55.2042 39.7647 55.4018 39.9372C55.5731 40.0698 55.6522 40.0698 55.863 39.8708C56.2187 39.5391 56.1924 39.287 55.7839 39.1411C55.3887 38.9818 55.4018 38.9818 55.2964 39.1013Z" fill="currentColor"/> <path d="M41.6469 40.2954C41.5152 40.5608 41.357 42.0202 41.2912 43.5859C41.2648 44.1697 41.1989 45.1515 41.1331 45.7751C41.0145 46.9427 41.054 48.8932 41.1989 49.132C41.2385 49.2116 41.2912 49.5698 41.3043 49.9413C41.3307 50.6844 41.5415 51.2151 41.8314 51.2151C42.108 51.2151 42.4506 50.8038 42.3584 50.5649C42.0158 49.6627 41.8182 47.8582 42.0158 47.3275C42.1344 47.0356 42.2398 46.9693 42.5955 46.9693C44.058 46.9693 45.3623 45.8282 46.3768 43.6788C46.7457 42.8694 46.7194 42.2591 46.2978 41.861C46.1001 41.6753 45.8498 41.5293 45.7312 41.5161C44.7958 41.4497 44.0975 41.8212 43.1225 42.9225C42.3715 43.7584 41.9368 44.0237 42.0817 43.5461C42.1212 43.4267 42.2003 42.9888 42.2793 42.5908C42.3452 42.1927 42.4638 41.6885 42.5428 41.4895C42.7668 40.9057 42.7273 40.3617 42.4374 40.2025C42.0553 40.0035 41.7918 40.0433 41.6469 40.2954ZM45.6258 42.7633C45.5336 44.2493 44.8617 45.3506 43.6759 45.9344C42.635 46.4518 42.3584 46.3855 42.4638 45.6425C42.5033 45.3638 42.7273 44.7933 42.9644 44.382C43.2148 43.9707 43.4651 43.5195 43.5441 43.3869C43.61 43.2542 43.7813 43.0684 43.9394 42.9888C44.0843 42.9092 44.4137 42.6969 44.664 42.5112C44.9144 42.3387 45.2306 42.1927 45.3887 42.2193C45.6126 42.2591 45.6522 42.3387 45.6258 42.7633ZM42.029 44.236C42.029 44.2758 41.9763 44.3422 41.8972 44.382C41.8314 44.4218 41.7655 44.3952 41.7655 44.3289C41.7655 44.2493 41.8314 44.183 41.8972 44.183C41.9763 44.183 42.029 44.2095 42.029 44.236Z" fill="currentColor"/> <path d="M52.108 40.4943C51.9631 40.5607 51.5679 40.9322 51.2253 41.3169C50.6324 41.9671 50.6061 41.9803 50.5929 41.6354C50.5929 41.2241 50.2372 40.826 49.9737 40.9189C49.8683 40.9587 49.7101 40.9985 49.6179 40.9985C49.5257 40.9985 49.249 41.37 49.0119 41.8079C48.3004 43.1612 47.7602 45.4699 47.8129 46.9692C47.8393 48.0572 47.9183 48.296 48.2213 48.296C48.5639 48.296 48.7879 47.8714 49.3412 46.1067C49.6179 45.231 50.0659 44.0634 50.3426 43.5195C50.8169 42.5509 51.6074 41.5292 51.8841 41.5292C51.9631 41.5292 52.0553 41.8211 52.108 42.1794C52.2003 42.8295 52.556 43.3735 52.6614 43.0285C52.6878 42.9357 52.8986 42.657 53.1094 42.3784C53.531 41.8477 53.5573 41.6486 53.3465 41.0118C53.1357 40.3882 52.6482 40.1891 52.108 40.4943Z" fill="currentColor"/> <path d="M54.664 41.7416C54.4137 42.4183 54.1502 44.0503 54.1502 44.9525C54.1502 45.6955 54.2161 45.9609 54.5323 46.5182C55.4545 48.1369 56.6798 48.0042 57.5758 46.213L57.8788 45.6027L58.0632 45.9742C58.2345 46.2793 58.3136 46.3191 58.6693 46.2528C59.1831 46.1599 60 45.3108 60.527 44.3024C60.9223 43.5461 61.4888 42.8561 61.6996 42.8561C61.8182 42.8561 61.7787 43.7451 61.581 45.6425C61.4361 46.9693 61.5151 48.1767 61.7655 48.6013C61.9631 48.9595 62.0817 49.0258 62.5033 49.0258C62.9644 49.0258 63.0303 48.9728 63.3597 48.3624C63.5573 47.9909 63.7549 47.4602 63.7945 47.1683C63.8867 46.5712 64.2819 45.6557 64.7694 44.9923C65.1383 44.4749 65.1647 44.3156 64.888 44.3156C64.5718 44.3156 63.9262 45.1913 63.4256 46.3059C63.0039 47.2214 62.6877 47.6725 62.5692 47.4735C62.3452 47.1285 62.556 44.6075 62.859 44.0237C63.0171 43.7053 63.0039 42.4979 62.8458 42.1795C62.5296 41.6089 61.4097 42.1529 60.3162 43.4267C59.1963 44.7137 58.9855 44.926 58.9196 44.7402C58.8933 44.6473 58.9328 44.382 59.0119 44.1564C59.0909 43.9309 59.1568 43.2409 59.1568 42.6306C59.1568 41.4232 59.0382 41.2242 58.4321 41.5028C58.1159 41.6487 58.0632 41.8743 57.9051 44.0237C57.8524 44.7933 57.6416 45.2842 57.0224 46.1201C56.4032 46.9427 56.2846 46.9029 56.0606 45.8282C56.0211 45.6027 56.0474 44.8862 56.1265 44.2228C56.3373 42.4581 56.0738 41.6089 55.2437 41.4497C54.8617 41.3701 54.7958 41.4099 54.664 41.7416Z" fill="currentColor"/> <path d="M73.1884 41.9274C73.1489 41.9937 73.2016 42.0601 73.307 42.0601C73.4124 42.0601 73.5441 41.9937 73.5837 41.9274C73.6232 41.8478 73.5705 41.7947 73.4651 41.7947C73.3597 41.7947 73.2279 41.8478 73.1884 41.9274Z" fill="currentColor"/> <path d="M66.9829 44.1962C66.8511 44.382 66.8379 45.9874 66.9697 46.1201C67.0092 46.1599 67.0619 45.8547 67.0883 45.4567C67.1015 45.0454 67.0751 44.7137 67.0092 44.7137C66.9434 44.7137 66.9697 44.6208 67.0619 44.5147C67.141 44.4085 67.1937 44.2626 67.1673 44.1697C67.1278 44.0635 67.0751 44.0768 66.9829 44.1962Z" fill="currentColor"/> <path d="M70.3557 44.5944C70.1845 44.9128 70.303 45.1384 70.4875 44.8465C70.6192 44.6342 70.6588 44.3157 70.5534 44.3157C70.527 44.3157 70.4348 44.4352 70.3557 44.5944Z" fill="currentColor"/> <path d="M65.9684 46.5314C65.9025 46.8764 65.9157 46.8764 66.087 46.6508C66.3505 46.2793 66.4163 46.4253 66.2582 47.0356C65.9947 48.044 65.9947 48.2297 66.2451 49.0258C66.4427 49.6494 66.5744 49.8485 66.8511 49.9546C67.2727 50.1006 67.8129 49.8219 68.4717 49.1187C69.1831 48.3624 69.3149 48.0705 69.2885 47.3275C69.2622 46.9427 69.3017 46.5182 69.3676 46.3855C69.6047 45.8415 69.1568 46.3457 68.4585 47.4071C67.5889 48.7339 67.4177 48.9064 67.1937 48.6278C67.0488 48.4553 66.9829 48.0042 66.9302 46.7703C66.917 46.3457 66.8906 46.2926 66.7984 46.5049C66.6798 46.757 66.6798 46.757 66.5876 46.4651C66.469 46.0405 66.0606 46.0936 65.9684 46.5314ZM66.7457 47.4735C66.5876 47.6194 66.5086 47.3806 66.614 47.0754L66.7194 46.7703L66.7721 47.0754C66.7984 47.2479 66.7852 47.4204 66.7457 47.4735ZM68.7747 48.5615C68.7747 48.6278 68.7484 48.6941 68.722 48.6941C68.6825 48.6941 68.6166 48.6278 68.5771 48.5615C68.5376 48.4818 68.5639 48.4288 68.6298 48.4288C68.7088 48.4288 68.7747 48.4818 68.7747 48.5615Z" fill="currentColor"/></symbol>
+                <radialGradient id="g-y" cx="0.42" cy="0.4" r="0.62"><stop offset="0" stop-color="#ffc600" stop-opacity="0.95"/><stop offset="1" stop-color="#ffc600" stop-opacity="0.28"/></radialGradient>
+                <radialGradient id="g-m" cx="0.58" cy="0.4" r="0.62"><stop offset="0" stop-color="#e4007c" stop-opacity="0.92"/><stop offset="1" stop-color="#e4007c" stop-opacity="0.28"/></radialGradient>
+                <radialGradient id="g-c" cx="0.5" cy="0.6" r="0.62"><stop offset="0" stop-color="#00a7e1" stop-opacity="0.92"/><stop offset="1" stop-color="#00a7e1" stop-opacity="0.28"/></radialGradient>
+                <linearGradient id="g-band-c" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#00a7e1"/><stop offset="1" stop-color="#00a7e1" stop-opacity="0"/></linearGradient>
+                <linearGradient id="g-band-m" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#e4007c" stop-opacity="0"/><stop offset="1" stop-color="#e4007c"/></linearGradient>
+                <linearGradient id="g-band-y" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#ffc600" stop-opacity="0.15"/><stop offset="0.5" stop-color="#ffc600" stop-opacity="0.85"/><stop offset="1" stop-color="#ffc600" stop-opacity="0.15"/></linearGradient>
+                <clipPath id="label-shape"><rect x="2" y="2" width="476" height="296" rx="26"/></clipPath>
+              </defs>
+              <g clip-path="url(#label-shape)">
+                <rect class="label__face" x="0" y="0" width="480" height="300"/>
+                <g class="label__inks">
+                  <g class="plate plate--c" data-plate="c">
+                    <circle cx="150" cy="186" r="74" fill="url(#g-c)"/>
+                    <rect x="40" y="262" width="400" height="14" fill="url(#g-band-c)"/>
+                  </g>
+                  <g class="plate plate--m" data-plate="m">
+                    <circle cx="190" cy="118" r="74" fill="url(#g-m)"/>
+                    <rect x="40" y="262" width="400" height="14" fill="url(#g-band-m)"/>
+                  </g>
+                  <g class="plate plate--y" data-plate="y">
+                    <circle cx="110" cy="118" r="74" fill="url(#g-y)"/>
+                    <rect x="40" y="262" width="400" height="14" fill="url(#g-band-y)"/>
+                  </g>
+                </g>
+                <g class="plate plate--k" data-plate="k">
+                  <use href="#fb-mark" x="292" y="40" width="150" height="118"/>
+                  <text x="292" y="192" font-family="Unbounded, sans-serif" font-weight="600" font-size="13.5" fill="currentColor">Самоклеящиеся</text>
+                  <text x="292" y="210" font-family="Unbounded, sans-serif" font-weight="600" font-size="13.5" fill="currentColor">этикетки</text>
+                  <text x="292" y="236" font-family="Golos Text, sans-serif" font-weight="500" font-size="12" fill="currentColor">info@fb-print.ru</text>
+                </g>
+              </g>
+              <rect class="label__die" x="2" y="2" width="476" height="296" rx="26"/>
+            </svg>
+          </div>
+
+          <div class="inks" role="group" aria-label="Краски на оттиске" data-proof-controls hidden>
+            <button class="ink" type="button" aria-pressed="true" data-ink="c"><span class="ink__chip" aria-hidden="true"></span>Голубая</button>
+            <button class="ink" type="button" aria-pressed="true" data-ink="m"><span class="ink__chip" aria-hidden="true"></span>Пурпурная</button>
+            <button class="ink" type="button" aria-pressed="true" data-ink="y"><span class="ink__chip" aria-hidden="true"></span>Жёлтая</button>
+            <button class="ink" type="button" aria-pressed="true" data-ink="k"><span class="ink__chip" aria-hidden="true"></span><span class="ink__name ink__name--light">Чернила</span><span class="ink__name ink__name--dark">Белила</span></button>
+          </div>
+
+          <div class="proof__foot" aria-hidden="true">
+            <span class="colorbar">
+              <i style="background:#00a7e1"></i><i style="background:#e4007c"></i><i style="background:#ffc600"></i><i style="background:#181143"></i><i style="background:#00006d"></i><i style="background:#e40000"></i><i style="background:#008200"></i><i style="background:#7fd3f0"></i><i style="background:#f17fbd"></i><i style="background:#ffe27f"></i>
+            </span>
+            <span class="proof__slug">FB-print · пробный оттиск</span>
+          </div>
+        </div>
+
+        <figcaption class="proof__caption">
+          <p class="proof__hint" data-proof-hint><strong>Цветопроба до&nbsp;тиража:</strong> вы&nbsp;видите и&nbsp;утверждаете цвет до&nbsp;запуска. <span class="proof__hint-pointer" data-proof-howto hidden>Отключите краску или наведите лупу&nbsp;— так цвет устроен на&nbsp;оттиске.</span><span class="proof__hint-touch" data-proof-howto hidden>Отключите краску или коснитесь этикетки&nbsp;— так цвет устроен на&nbsp;оттиске.</span></p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="benefits" aria-label="Гарантии качества">
+    <div class="shell">
+      <ul class="benefits__grid">
+        <li class="benefit">
+          <span class="benefit__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.6 1.6 0 0 0 .33 1.77l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.6 1.6 0 0 0-1.77-.33 1.6 1.6 0 0 0-1 1.47V21a2 2 0 1 1-4 0v-.09a1.6 1.6 0 0 0-1-1.51 1.6 1.6 0 0 0-1.77.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.6 1.6 0 0 0 .33-1.77 1.6 1.6 0 0 0-1.47-1H3a2 2 0 1 1 0-4h.09a1.6 1.6 0 0 0 1.51-1 1.6 1.6 0 0 0-.33-1.77l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.6 1.6 0 0 0 1.77.33h.13a1.6 1.6 0 0 0 1-1.47V3a2 2 0 1 1 4 0v.09a1.6 1.6 0 0 0 1 1.47 1.6 1.6 0 0 0 1.77-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.6 1.6 0 0 0-.33 1.77v.13a1.6 1.6 0 0 0 1.47 1H21a2 2 0 1 1 0 4h-.09a1.6 1.6 0 0 0-1.51 1z"/></svg>
+          </span>
+          <span class="benefit__body">
+            <strong>Оборудование ведущих производителей</strong>
+            <span>Современный парк цифровой и флексопечати</span>
+          </span>
+        </li>
+        <li class="benefit">
+          <span class="benefit__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M9 13.5l2.2 2.2L15.5 11"/></svg>
+          </span>
+          <span class="benefit__body">
+            <strong>Контроль на всех стадиях</strong>
+            <span>Поэтапная проверка качества на производстве</span>
+          </span>
+        </li>
+        <li class="benefit">
+          <span class="benefit__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          </span>
+          <span class="benefit__body">
+            <strong>Точно в срок</strong>
+            <span>Чёткое соблюдение договорённостей</span>
+          </span>
+        </li>
+        <li class="benefit">
+          <span class="benefit__icon">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l9 5-9 5-9-5 9-5z"/><path d="M3 12.5l9 5 9-5"/></svg>
+          </span>
+          <span class="benefit__body">
+            <strong>Полный цикл</strong>
+            <span>Дизайн, печать, лак и вырубка — в одном месте</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--white" id="tech">
+    <div class="shell">
+      <div class="section__head">
+        <h2>Две технологии — под любой тираж</h2>
+        <p class="lead">Поможем выбрать способ печати под ваш продукт, тираж и бюджет.</p>
+      </div>
+
+      <div class="grid grid--2">
+        <article class="tech-card">
+          <div class="tech-card__top">
+            <span class="tech-card__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9V3h12v6"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7" rx="1"/></svg>
+            </span>
+            <span class="tag">малые тиражи · срочно</span>
+          </div>
+          <h3 class="tech-card__title">Цифровая печать</h3>
+          <p>Идеальна для небольших партий, индивидуальных дизайнов и срочных заказов: быстро и без компромиссов.</p>
+          <ul class="ticks">
+            <li><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Быстрый запуск — идеально для срочных заказов</li>
+            <li><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Индивидуальные дизайны и малые партии</li>
+            <li><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Полный цвет без ограничений</li>
+          </ul>
+        </article>
+
+        <article class="tech-card">
+          <div class="tech-card__top">
+            <span class="tech-card__icon">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="8.5" r="4.5"/><circle cx="7.5" cy="8.5" r="1.4"/><path d="M12.2 8.5H22"/><rect x="14" y="13" width="8" height="6" rx="1.5"/><path d="M7.5 13.5V19h4"/></svg>
+            </span>
+            <span class="tag">средние и крупные тиражи</span>
+          </div>
+          <h3 class="tech-card__title">Флексопечать</h3>
+          <p>Выгодна на средних и крупных тиражах, особенно при регулярных повторных заказах.</p>
+          <ul class="ticks">
+            <li><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Яркие, стойкие цвета</li>
+            <li><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Низкая себестоимость при повторных заказах</li>
+            <li><svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Выгодная цена на больших объёмах</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="callout">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="M9.4 9.2a2.7 2.7 0 0 1 5.2 0.9c0 1.8-2.7 2.2-2.7 3.6"/><circle cx="12" cy="17.4" r="0.4" fill="currentColor"/></svg>
+        Не знаете, что выбрать? Пришлите макет — посчитаем оба варианта и порекомендуем оптимальный по цене и качеству.
+      </p>
+    </div>
+  </section>
+
+  <!--
+    ВИДЕО ИЗГОТОВЛЕНИЯ ФОРМ (assets/plate-*). Кадры из видео «Как это работает #6.
+    Процесс изготовления цифровых форм высокой печати» (файл владельца). Владелец, 2026-10-09:
+    «Формы делаем сами, видео можно использовать». В кадрах нет лиц, титров и логотипов.
+    Все четыре кадра — живые вставки plate-*.webm/.mp4 (вперёд и назад, без звука) с постером plate-*-800.jpg.
+    Планы: запись 0:45.04–0:48.96, экспонирование 2:32.90–2:37.32, вымывка 3:13.45–3:17.03, рельеф 3:20.92–3:24.56.
+    ВРЕМЕННЫЕ ИЛЛЮСТРАЦИИ ОБОРУДОВАНИЯ: флексопечать, контроль цвета, вырубка и намотка.
+    Векторные схемы в стиле исходной иллюстрации, без марок и логотипов. Помечены заглушкой
+    [ФОТО ПЕЧАТИ И ВЫРУБКИ]. Перед запуском заменить на фото производства и убрать заглушку.
+  -->
+  <section class="section section--ink" id="equipment" aria-labelledby="equipment-title">
+    <div class="shell">
+      <div class="section__head">
+        <h2 id="equipment-title">Парк оборудования</h2>
+        <p class="lead">Изготовление форм, цифровая и&nbsp;флексопечать, лакирование, вырубка, намотка и&nbsp;контроль цвета&nbsp;— на&nbsp;одном&nbsp;производстве. Машины Gallus, Nilpeter, CDS и&nbsp;Huada.</p>
+      </div>
+
+      <div class="press">
+        <div class="press__trim">
+          <span class="crop crop--tl" aria-hidden="true"></span>
+          <span class="crop crop--tr" aria-hidden="true"></span>
+          <span class="crop crop--bl" aria-hidden="true"></span>
+          <span class="crop crop--br" aria-hidden="true"></span>
+          <svg class="reg proof__reg proof__reg--l" width="18" height="18" aria-hidden="true"><use href="#reg"/></svg>
+          <svg class="reg proof__reg proof__reg--r" width="18" height="18" aria-hidden="true"><use href="#reg"/></svg>
+          <div class="kit-grid">
+            <div class="kit-strip">
+              <figure class="kit">
+                <div class="kit__photo"><video muted loop playsinline preload="none" poster="assets/plate-imaging-800.jpg" width="640" height="480" aria-label="Вращается вакуумный барабан устройства лазерной записи флексоформ" data-autoplay><source src="assets/plate-imaging.webm" type="video/webm"><source src="assets/plate-imaging.mp4" type="video/mp4"></video></div>
+                <figcaption class="kit__label">Запись формы</figcaption>
+              </figure>
+              <figure class="kit">
+                <div class="kit__photo"><video muted loop playsinline preload="none" poster="assets/plate-exposure-800.jpg" width="640" height="480" aria-label="Оператор укладывает флексоформу в выдвижной стол экспонирующего устройства" data-autoplay><source src="assets/plate-exposure.webm" type="video/webm"><source src="assets/plate-exposure.mp4" type="video/mp4"></video></div>
+                <figcaption class="kit__label">Экспонирование</figcaption>
+              </figure>
+              <figure class="kit">
+                <div class="kit__photo"><video muted loop playsinline preload="none" poster="assets/plate-washout-800.jpg" width="640" height="480" aria-label="Вымывной процессор: крышка с закреплённой формой над раствором" data-autoplay><source src="assets/plate-washout.webm" type="video/webm"><source src="assets/plate-washout.mp4" type="video/mp4"></video></div>
+                <figcaption class="kit__label">Вымывка</figcaption>
+              </figure>
+              <figure class="kit">
+                <div class="kit__photo"><video muted loop playsinline preload="none" poster="assets/plate-relief-800.jpg" width="640" height="480" aria-label="Рельеф готовой флексоформы крупным планом" data-autoplay><source src="assets/plate-relief.webm" type="video/webm"><source src="assets/plate-relief.mp4" type="video/mp4"></video></div>
+                <figcaption class="kit__label">Готовая форма</figcaption>
+              </figure>
+            </div>
+            <figure class="kit kit--wide">
+              <div class="kit__art" role="img" aria-label="Иллюстрация: флексографская машина — разматка, четыре печатные секции C, M, Y, K и намотка отпечатанного рулона">
+                <svg viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g transform="translate(0 4)"><path class="i-h" d="M24 292H776"/><path class="i-f i-s" d="M88 214h16l14 78H74z"/><circle class="i-sh" cx="104" cy="222" r="54"/><circle class="i-f i-s" cx="96" cy="214" r="54"/><circle class="i-h" cx="96" cy="214" r="42"/><circle class="i-h" cx="96" cy="214" r="30"/><circle class="i-gr i-s" cx="96" cy="214" r="15"/><circle class="i-k" cx="96" cy="214" r="5"/><path class="i-f i-s" d="M708 206h16l16 86h-48z"/><circle class="i-sh" cx="724" cy="214" r="46"/><circle class="i-f i-s" cx="716" cy="206" r="46"/><circle class="i-h" cx="716" cy="206" r="35"/><circle class="i-h" cx="716" cy="206" r="25"/><circle class="i-arc i-arc--m" cx="716" cy="206" r="46" stroke-dasharray="46 243" transform="rotate(150 716 206)"/><circle class="i-gr i-s" cx="716" cy="206" r="13"/><circle class="i-k" cx="716" cy="206" r="4"/><path class="i-s" d="M397 66V78"/><rect class="i-sh" x="357" y="26" width="96" height="48" rx="8"/><rect class="i-f i-s" x="349" y="18" width="96" height="48" rx="8"/><rect class="i-c" x="361" y="28" width="14" height="13" rx="3"/><rect class="i-m" x="381" y="28" width="14" height="13" rx="3"/><rect class="i-y" x="401" y="28" width="14" height="13" rx="3"/><rect class="i-k" x="421" y="28" width="14" height="13" rx="3"/><rect class="i-k" x="361" y="50" width="46" height="6" rx="3"/><rect class="i-sf" x="413" y="50" width="20" height="6" rx="3"/><rect class="i-sh" x="178" y="246" width="480" height="40" rx="10"/><rect class="i-f i-s" x="186" y="78" width="106" height="170" rx="10"/><rect class="i-f i-s" x="300" y="78" width="106" height="170" rx="10"/><rect class="i-f i-s" x="414" y="78" width="106" height="170" rx="10"/><rect class="i-f i-s" x="528" y="78" width="106" height="170" rx="10"/><rect class="i-f i-s" x="170" y="238" width="480" height="40" rx="10"/><rect class="i-k" x="192" y="278" width="24" height="14" rx="3"/><rect class="i-k" x="604" y="278" width="24" height="14" rx="3"/><path class="i-wo" d="M96 160H716"/><path class="i-wb" d="M96 160H716"/><path class="i-ink i-ink--c" d="M251 160h7"/><path class="i-ink i-ink--c" d="M365 160h7"/><path class="i-ink i-ink--m" d="M375 160h7"/><path class="i-ink i-ink--c" d="M479 160h7"/><path class="i-ink i-ink--m" d="M489 160h7"/><path class="i-ink i-ink--y" d="M499 160h7"/><path class="i-ink i-ink--c" d="M593 160h7"/><path class="i-ink i-ink--m" d="M603 160h7"/><path class="i-ink i-ink--y" d="M613 160h7"/><path class="i-ink i-ink--k" d="M623 160h7"/><path class="i-ink i-ink--c" d="M642 160h7"/><path class="i-ink i-ink--m" d="M652 160h7"/><path class="i-ink i-ink--y" d="M662 160h7"/><path class="i-ink i-ink--k" d="M672 160h7"/><path class="i-ink i-ink--c" d="M682 160h7"/><path class="i-ink i-ink--m" d="M692 160h7"/><rect class="i-c i-s" x="260" y="92" width="24" height="32" rx="6"/><text class="i-lt" x="272" y="112.5">C</text><circle class="i-sf i-s" cx="253" cy="113" r="11"/><circle class="i-f i-s" cx="226" cy="134" r="22"/><circle class="i-arc i-arc--c" cx="226" cy="134" r="22" stroke-dasharray="64 75" transform="rotate(195 226 134)"/><circle class="i-k" cx="226" cy="134" r="4"/><circle class="i-f i-s" cx="226" cy="183" r="18"/><circle class="i-k" cx="226" cy="183" r="4"/><rect class="i-m i-s" x="374" y="92" width="24" height="32" rx="6"/><text class="i-lt" x="386" y="112.5">M</text><circle class="i-sf i-s" cx="367" cy="113" r="11"/><circle class="i-f i-s" cx="340" cy="134" r="22"/><circle class="i-arc i-arc--m" cx="340" cy="134" r="22" stroke-dasharray="64 75" transform="rotate(195 340 134)"/><circle class="i-k" cx="340" cy="134" r="4"/><circle class="i-f i-s" cx="340" cy="183" r="18"/><circle class="i-k" cx="340" cy="183" r="4"/><rect class="i-y i-s" x="488" y="92" width="24" height="32" rx="6"/><text class="i-lt i-lt--ink" x="500" y="112.5">Y</text><circle class="i-sf i-s" cx="481" cy="113" r="11"/><circle class="i-f i-s" cx="454" cy="134" r="22"/><circle class="i-arc i-arc--y" cx="454" cy="134" r="22" stroke-dasharray="64 75" transform="rotate(195 454 134)"/><circle class="i-k" cx="454" cy="134" r="4"/><circle class="i-f i-s" cx="454" cy="183" r="18"/><circle class="i-k" cx="454" cy="183" r="4"/><rect class="i-k i-s" x="602" y="92" width="24" height="32" rx="6"/><text class="i-lt i-lt--k" x="614" y="112.5">K</text><circle class="i-sf i-s" cx="595" cy="113" r="11"/><circle class="i-f i-s" cx="568" cy="134" r="22"/><circle class="i-arc i-arc--k" cx="568" cy="134" r="22" stroke-dasharray="64 75" transform="rotate(195 568 134)"/><circle class="i-k" cx="568" cy="134" r="4"/><circle class="i-f i-s" cx="568" cy="183" r="18"/><circle class="i-k" cx="568" cy="183" r="4"/></g></svg>
+              </div>
+              <figcaption class="kit__label">Флексопечать</figcaption>
+            </figure>
+            <figure class="kit kit--tall">
+              <div class="kit__art" role="img" aria-label="Иллюстрация: пробный оттиск под лупой с растровыми точками и веер цветовых шкал">
+                <svg class="kit__sheet" viewBox="0 14 400 430" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><defs><clipPath id="kit-lens"><circle cx="262" cy="314" r="65"/></clipPath></defs><g transform="rotate(-5 192 200)"><rect class="i-sh" x="74" y="48" width="252" height="320" rx="3"/><rect class="i-f i-s" x="66" y="40" width="252" height="320" rx="3"/><path class="i-s2" d="M82 70V56h14M288 56h14v14M82 330v14h14M288 344h14v-14"/><circle class="i-s2" cx="192" cy="58" r="6"/><path class="i-s2" d="M192 49v18M183 58h18"/><rect class="i-die" x="92" y="78" width="200" height="136" rx="18"/><rect class="i-m" x="100" y="86" width="184" height="120" rx="12"/><circle class="i-wht" cx="142" cy="146" r="20"/><rect class="i-wht" x="174" y="128" width="84" height="9" rx="4.5"/><rect class="i-wht" x="174" y="145" width="60" height="7" rx="3.5" opacity="0.75"/><rect class="i-wht" x="174" y="160" width="72" height="7" rx="3.5" opacity="0.5"/><rect class="i-k" x="100" y="232" width="150" height="8" rx="4"/><rect class="i-sf" x="100" y="250" width="112" height="6" rx="3"/><rect class="i-sf" x="100" y="264" width="128" height="6" rx="3"/><rect class="i-c" x="92" y="296" width="24" height="22"/><rect class="i-m" x="118" y="296" width="24" height="22"/><rect class="i-y" x="144" y="296" width="24" height="22"/><rect class="i-k" x="170" y="296" width="24" height="22"/><rect fill="#00006d" x="196" y="296" width="24" height="22"/><rect fill="#e40000" x="222" y="296" width="24" height="22"/><rect fill="#008200" x="248" y="296" width="24" height="22"/><rect class="i-sf" x="274" y="296" width="24" height="22"/></g><circle class="i-sh" cx="270" cy="322" r="72"/><path class="i-hd" d="M310 362L364 416"/><circle class="i-f" cx="262" cy="314" r="68"/><g clip-path="url(#kit-lens)"><g class="i-mix"><g class="i-c"><circle cx="215.2" cy="272.5" r="2.2"/><circle cx="211.5" cy="286" r="2.1"/><circle cx="207.9" cy="299.5" r="2"/><circle cx="204.3" cy="313" r="1.9"/><circle cx="200.7" cy="326.6" r="1.7"/><circle cx="232.3" cy="262.6" r="2.8"/><circle cx="228.7" cy="276.1" r="2.7"/><circle cx="225.1" cy="289.6" r="2.6"/><circle cx="221.4" cy="303.1" r="2.5"/><circle cx="217.8" cy="316.7" r="2.3"/><circle cx="214.2" cy="330.2" r="2.2"/><circle cx="210.6" cy="343.7" r="2.1"/><circle cx="249.4" cy="252.7" r="3.5"/><circle cx="245.8" cy="266.2" r="3.3"/><circle cx="242.2" cy="279.7" r="3.2"/><circle cx="238.6" cy="293.2" r="3.1"/><circle cx="235" cy="306.8" r="2.9"/><circle cx="231.3" cy="320.3" r="2.8"/><circle cx="227.7" cy="333.8" r="2.7"/><circle cx="224.1" cy="347.3" r="2.6"/><circle cx="220.5" cy="360.8" r="2.4"/><circle cx="263" cy="256.3" r="3.9"/><circle cx="259.3" cy="269.8" r="3.8"/><circle cx="255.7" cy="283.3" r="3.7"/><circle cx="252.1" cy="296.9" r="3.5"/><circle cx="248.5" cy="310.4" r="3.4"/><circle cx="244.9" cy="323.9" r="3.3"/><circle cx="241.2" cy="337.4" r="3.2"/><circle cx="237.6" cy="350.9" r="3"/><circle cx="234" cy="364.5" r="2.9"/><circle cx="276.5" cy="259.9" r="4.4"/><circle cx="272.9" cy="273.4" r="4.3"/><circle cx="269.2" cy="287" r="4.2"/><circle cx="265.6" cy="300.5" r="4"/><circle cx="262" cy="314" r="3.9"/><circle cx="258.4" cy="327.5" r="3.8"/><circle cx="254.8" cy="341" r="3.6"/><circle cx="251.1" cy="354.6" r="3.5"/><circle cx="247.5" cy="368.1" r="3.4"/><circle cx="290" cy="263.5" r="4.9"/><circle cx="286.4" cy="277.1" r="4.8"/><circle cx="282.8" cy="290.6" r="4.6"/><circle cx="279.1" cy="304.1" r="4.5"/><circle cx="275.5" cy="317.6" r="4.4"/><circle cx="271.9" cy="331.1" r="4.3"/><circle cx="268.3" cy="344.7" r="4.1"/><circle cx="264.7" cy="358.2" r="4"/><circle cx="261" cy="371.7" r="3.9"/><circle cx="303.5" cy="267.2" r="5.4"/><circle cx="299.9" cy="280.7" r="5.2"/><circle cx="296.3" cy="294.2" r="5.1"/><circle cx="292.7" cy="307.7" r="5"/><circle cx="289" cy="321.2" r="4.9"/><circle cx="285.4" cy="334.8" r="4.7"/><circle cx="281.8" cy="348.3" r="4.6"/><circle cx="278.2" cy="361.8" r="4.5"/><circle cx="274.6" cy="375.3" r="4.3"/><circle cx="317.1" cy="270.8" r="5.8"/><circle cx="313.4" cy="284.3" r="5.7"/><circle cx="309.8" cy="297.8" r="5.6"/><circle cx="306.2" cy="311.3" r="5.5"/><circle cx="302.6" cy="324.9" r="5.3"/><circle cx="298.9" cy="338.4" r="5.2"/><circle cx="295.3" cy="351.9" r="5.1"/><circle cx="291.7" cy="365.4" r="5"/><circle cx="327" cy="287.9" r="6.2"/><circle cx="323.3" cy="301.4" r="6.1"/><circle cx="319.7" cy="315" r="5.9"/><circle cx="316.1" cy="328.5" r="5.8"/><circle cx="312.5" cy="342" r="5.7"/><circle cx="308.8" cy="355.5" r="5.6"/><circle cx="305.2" cy="369.1" r="5.4"/><circle cx="329.6" cy="332.1" r="6.2"/></g><g class="i-m"><circle cx="243.9" cy="246.4" r="6.2"/><circle cx="288.1" cy="249" r="6.2"/><circle cx="274.6" cy="252.7" r="6.1"/><circle cx="261" cy="256.3" r="5.9"/><circle cx="247.5" cy="259.9" r="5.8"/><circle cx="234" cy="263.5" r="5.7"/><circle cx="220.5" cy="267.2" r="5.6"/><circle cx="206.9" cy="270.8" r="5.4"/><circle cx="305.2" cy="258.9" r="5.8"/><circle cx="291.7" cy="262.6" r="5.7"/><circle cx="278.2" cy="266.2" r="5.6"/><circle cx="264.7" cy="269.8" r="5.5"/><circle cx="251.1" cy="273.4" r="5.3"/><circle cx="237.6" cy="277.1" r="5.2"/><circle cx="224.1" cy="280.7" r="5.1"/><circle cx="210.6" cy="284.3" r="5"/><circle cx="308.8" cy="272.5" r="5.4"/><circle cx="295.3" cy="276.1" r="5.2"/><circle cx="281.8" cy="279.7" r="5.1"/><circle cx="268.3" cy="283.3" r="5"/><circle cx="254.8" cy="287" r="4.9"/><circle cx="241.2" cy="290.6" r="4.7"/><circle cx="227.7" cy="294.2" r="4.6"/><circle cx="214.2" cy="297.8" r="4.5"/><circle cx="200.7" cy="301.4" r="4.3"/><circle cx="312.5" cy="286" r="4.9"/><circle cx="298.9" cy="289.6" r="4.8"/><circle cx="285.4" cy="293.2" r="4.6"/><circle cx="271.9" cy="296.9" r="4.5"/><circle cx="258.4" cy="300.5" r="4.4"/><circle cx="244.9" cy="304.1" r="4.3"/><circle cx="231.3" cy="307.7" r="4.1"/><circle cx="217.8" cy="311.3" r="4"/><circle cx="204.3" cy="315" r="3.9"/><circle cx="316.1" cy="299.5" r="4.4"/><circle cx="302.6" cy="303.1" r="4.3"/><circle cx="289" cy="306.8" r="4.2"/><circle cx="275.5" cy="310.4" r="4"/><circle cx="262" cy="314" r="3.9"/><circle cx="248.5" cy="317.6" r="3.8"/><circle cx="235" cy="321.2" r="3.6"/><circle cx="221.4" cy="324.9" r="3.5"/><circle cx="207.9" cy="328.5" r="3.4"/><circle cx="319.7" cy="313" r="3.9"/><circle cx="306.2" cy="316.7" r="3.8"/><circle cx="292.7" cy="320.3" r="3.7"/><circle cx="279.1" cy="323.9" r="3.5"/><circle cx="265.6" cy="327.5" r="3.4"/><circle cx="252.1" cy="331.1" r="3.3"/><circle cx="238.6" cy="334.8" r="3.2"/><circle cx="225.1" cy="338.4" r="3"/><circle cx="211.5" cy="342" r="2.9"/><circle cx="323.3" cy="326.6" r="3.5"/><circle cx="309.8" cy="330.2" r="3.3"/><circle cx="296.3" cy="333.8" r="3.2"/><circle cx="282.8" cy="337.4" r="3.1"/><circle cx="269.2" cy="341" r="2.9"/><circle cx="255.7" cy="344.7" r="2.8"/><circle cx="242.2" cy="348.3" r="2.7"/><circle cx="228.7" cy="351.9" r="2.6"/><circle cx="215.2" cy="355.5" r="2.4"/><circle cx="313.4" cy="343.7" r="2.8"/><circle cx="299.9" cy="347.3" r="2.7"/><circle cx="286.4" cy="350.9" r="2.6"/><circle cx="272.9" cy="354.6" r="2.5"/><circle cx="259.3" cy="358.2" r="2.3"/><circle cx="245.8" cy="361.8" r="2.2"/><circle cx="232.3" cy="365.4" r="2.1"/><circle cx="303.5" cy="360.8" r="2.2"/><circle cx="290" cy="364.5" r="2.1"/><circle cx="276.5" cy="368.1" r="2"/><circle cx="263" cy="371.7" r="1.9"/><circle cx="249.4" cy="375.3" r="1.7"/></g><g class="i-y"><circle cx="206" cy="286" r="3"/><circle cx="206" cy="300" r="3"/><circle cx="206" cy="314" r="3"/><circle cx="206" cy="328" r="3"/><circle cx="206" cy="342" r="3"/><circle cx="220" cy="272" r="3"/><circle cx="220" cy="286" r="3"/><circle cx="220" cy="300" r="3"/><circle cx="220" cy="314" r="3"/><circle cx="220" cy="328" r="3"/><circle cx="220" cy="342" r="3"/><circle cx="220" cy="356" r="3"/><circle cx="234" cy="258" r="3"/><circle cx="234" cy="272" r="3"/><circle cx="234" cy="286" r="3"/><circle cx="234" cy="300" r="3"/><circle cx="234" cy="314" r="3"/><circle cx="234" cy="328" r="3"/><circle cx="234" cy="342" r="3"/><circle cx="234" cy="356" r="3"/><circle cx="234" cy="370" r="3"/><circle cx="248" cy="258" r="3"/><circle cx="248" cy="272" r="3"/><circle cx="248" cy="286" r="3"/><circle cx="248" cy="300" r="3"/><circle cx="248" cy="314" r="3"/><circle cx="248" cy="328" r="3"/><circle cx="248" cy="342" r="3"/><circle cx="248" cy="356" r="3"/><circle cx="248" cy="370" r="3"/><circle cx="262" cy="258" r="3"/><circle cx="262" cy="272" r="3"/><circle cx="262" cy="286" r="3"/><circle cx="262" cy="300" r="3"/><circle cx="262" cy="314" r="3"/><circle cx="262" cy="328" r="3"/><circle cx="262" cy="342" r="3"/><circle cx="262" cy="356" r="3"/><circle cx="262" cy="370" r="3"/><circle cx="276" cy="258" r="3"/><circle cx="276" cy="272" r="3"/><circle cx="276" cy="286" r="3"/><circle cx="276" cy="300" r="3"/><circle cx="276" cy="314" r="3"/><circle cx="276" cy="328" r="3"/><circle cx="276" cy="342" r="3"/><circle cx="276" cy="356" r="3"/><circle cx="276" cy="370" r="3"/><circle cx="290" cy="258" r="3"/><circle cx="290" cy="272" r="3"/><circle cx="290" cy="286" r="3"/><circle cx="290" cy="300" r="3"/><circle cx="290" cy="314" r="3"/><circle cx="290" cy="328" r="3"/><circle cx="290" cy="342" r="3"/><circle cx="290" cy="356" r="3"/><circle cx="290" cy="370" r="3"/><circle cx="304" cy="272" r="3"/><circle cx="304" cy="286" r="3"/><circle cx="304" cy="300" r="3"/><circle cx="304" cy="314" r="3"/><circle cx="304" cy="328" r="3"/><circle cx="304" cy="342" r="3"/><circle cx="304" cy="356" r="3"/><circle cx="318" cy="286" r="3"/><circle cx="318" cy="300" r="3"/><circle cx="318" cy="314" r="3"/><circle cx="318" cy="328" r="3"/><circle cx="318" cy="342" r="3"/></g></g><g class="i-k"><circle cx="242.2" cy="254.6" r="2.4"/><circle cx="232.3" cy="264.5" r="2.6"/><circle cx="222.4" cy="274.4" r="2.7"/><circle cx="212.5" cy="284.3" r="2.8"/><circle cx="202.6" cy="294.2" r="2.9"/><circle cx="262" cy="254.6" r="2.2"/><circle cx="252.1" cy="264.5" r="2.3"/><circle cx="242.2" cy="274.4" r="2.4"/><circle cx="232.3" cy="284.3" r="2.6"/><circle cx="222.4" cy="294.2" r="2.7"/><circle cx="212.5" cy="304.1" r="2.8"/><circle cx="202.6" cy="314" r="2.9"/><circle cx="281.8" cy="254.6" r="2"/><circle cx="271.9" cy="264.5" r="2.1"/><circle cx="262" cy="274.4" r="2.2"/><circle cx="252.1" cy="284.3" r="2.3"/><circle cx="242.2" cy="294.2" r="2.4"/><circle cx="232.3" cy="304.1" r="2.6"/><circle cx="222.4" cy="314" r="2.7"/><circle cx="212.5" cy="323.9" r="2.8"/><circle cx="202.6" cy="333.8" r="2.9"/><circle cx="291.7" cy="264.5" r="1.8"/><circle cx="281.8" cy="274.4" r="2"/><circle cx="271.9" cy="284.3" r="2.1"/><circle cx="262" cy="294.2" r="2.2"/><circle cx="252.1" cy="304.1" r="2.3"/><circle cx="242.2" cy="314" r="2.4"/><circle cx="232.3" cy="323.9" r="2.6"/><circle cx="222.4" cy="333.8" r="2.7"/><circle cx="212.5" cy="343.7" r="2.8"/><circle cx="301.6" cy="274.4" r="1.7"/><circle cx="291.7" cy="284.3" r="1.8"/><circle cx="281.8" cy="294.2" r="2"/><circle cx="271.9" cy="304.1" r="2.1"/><circle cx="262" cy="314" r="2.2"/><circle cx="252.1" cy="323.9" r="2.3"/><circle cx="242.2" cy="333.8" r="2.4"/><circle cx="232.3" cy="343.7" r="2.6"/><circle cx="222.4" cy="353.6" r="2.7"/><circle cx="311.5" cy="284.3" r="1.6"/><circle cx="301.6" cy="294.2" r="1.7"/><circle cx="291.7" cy="304.1" r="1.8"/><circle cx="281.8" cy="314" r="2"/><circle cx="271.9" cy="323.9" r="2.1"/><circle cx="262" cy="333.8" r="2.2"/><circle cx="252.1" cy="343.7" r="2.3"/><circle cx="242.2" cy="353.6" r="2.4"/><circle cx="232.3" cy="363.5" r="2.6"/><circle cx="321.4" cy="294.2" r="1.5"/><circle cx="311.5" cy="304.1" r="1.6"/><circle cx="301.6" cy="314" r="1.7"/><circle cx="291.7" cy="323.9" r="1.8"/><circle cx="281.8" cy="333.8" r="2"/><circle cx="271.9" cy="343.7" r="2.1"/><circle cx="262" cy="353.6" r="2.2"/><circle cx="252.1" cy="363.5" r="2.3"/><circle cx="242.2" cy="373.4" r="2.4"/><circle cx="321.4" cy="314" r="1.5"/><circle cx="311.5" cy="323.9" r="1.6"/><circle cx="301.6" cy="333.8" r="1.7"/><circle cx="291.7" cy="343.7" r="1.8"/><circle cx="281.8" cy="353.6" r="2"/><circle cx="271.9" cy="363.5" r="2.1"/><circle cx="262" cy="373.4" r="2.2"/><circle cx="321.4" cy="333.8" r="1.5"/><circle cx="311.5" cy="343.7" r="1.6"/><circle cx="301.6" cy="353.6" r="1.7"/><circle cx="291.7" cy="363.5" r="1.8"/><circle cx="281.8" cy="373.4" r="2"/></g></g><path class="i-gl" d="M211.3 295.5A54 54 0 0 1 243.5 263.3"/><circle class="i-rim" cx="262" cy="314" r="68"/></svg>
+                <svg class="kit__fan" viewBox="0 36 400 318" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect class="i-sh" x="-24" y="-24" width="290" height="48" rx="10" transform="translate(84 306) rotate(-62)"/><g transform="translate(78 300) rotate(-62)"><rect class="i-f i-s" x="-24" y="-24" width="290" height="48" rx="10"/><rect fill="#00a7e1" x="30" y="-15" width="38" height="30" rx="5"/><rect fill="#38bae8" x="76" y="-15" width="38" height="30" rx="5"/><rect fill="#70ceee" x="122" y="-15" width="38" height="30" rx="5"/><rect fill="#a3dff4" x="168" y="-15" width="38" height="30" rx="5"/><rect fill="#d1effa" x="214" y="-15" width="38" height="30" rx="5"/></g><rect class="i-sh" x="-24" y="-24" width="290" height="48" rx="10" transform="translate(84 306) rotate(-46)"/><g transform="translate(78 300) rotate(-46)"><rect class="i-f i-s" x="-24" y="-24" width="290" height="48" rx="10"/><rect fill="#e4007c" x="30" y="-15" width="38" height="30" rx="5"/><rect fill="#ea3899" x="76" y="-15" width="38" height="30" rx="5"/><rect fill="#f070b6" x="122" y="-15" width="38" height="30" rx="5"/><rect fill="#f5a3d0" x="168" y="-15" width="38" height="30" rx="5"/><rect fill="#fad1e7" x="214" y="-15" width="38" height="30" rx="5"/></g><rect class="i-sh" x="-24" y="-24" width="290" height="48" rx="10" transform="translate(84 306) rotate(-30)"/><g transform="translate(78 300) rotate(-30)"><rect class="i-f i-s" x="-24" y="-24" width="290" height="48" rx="10"/><rect fill="#ffc600" x="30" y="-15" width="38" height="30" rx="5"/><rect fill="#ffd338" x="76" y="-15" width="38" height="30" rx="5"/><rect fill="#ffdf70" x="122" y="-15" width="38" height="30" rx="5"/><rect fill="#ffeaa3" x="168" y="-15" width="38" height="30" rx="5"/><rect fill="#fff5d1" x="214" y="-15" width="38" height="30" rx="5"/></g><rect class="i-sh" x="-24" y="-24" width="290" height="48" rx="10" transform="translate(84 306) rotate(-14)"/><g transform="translate(78 300) rotate(-14)"><rect class="i-f i-s" x="-24" y="-24" width="290" height="48" rx="10"/><rect fill="#00006d" x="30" y="-15" width="38" height="30" rx="5"/><rect fill="#e40000" x="76" y="-15" width="38" height="30" rx="5"/><rect fill="#008200" x="122" y="-15" width="38" height="30" rx="5"/><rect fill="#7fd3f0" x="168" y="-15" width="38" height="30" rx="5"/><rect fill="#f17fbd" x="214" y="-15" width="38" height="30" rx="5"/></g><rect class="i-sh" x="-24" y="-24" width="290" height="48" rx="10" transform="translate(84 306) rotate(2)"/><g transform="translate(78 300) rotate(2)"><rect class="i-f i-s" x="-24" y="-24" width="290" height="48" rx="10"/><rect class="i-k" x="30" y="-15" width="38" height="30" rx="5" fill-opacity="1"/><rect class="i-k" x="76" y="-15" width="38" height="30" rx="5" fill-opacity="0.78"/><rect class="i-k" x="122" y="-15" width="38" height="30" rx="5" fill-opacity="0.56"/><rect class="i-k" x="168" y="-15" width="38" height="30" rx="5" fill-opacity="0.36"/><rect class="i-k" x="214" y="-15" width="38" height="30" rx="5" fill-opacity="0.18"/></g><circle class="i-gr i-s" cx="78" cy="300" r="11"/><circle class="i-k" cx="78" cy="300" r="4"/></svg>
+              </div>
+              <figcaption class="kit__label">Контроль цвета</figcaption>
+            </figure>
+            <figure class="kit kit--wide">
+              <div class="kit__art" role="img" aria-label="Иллюстрация: вырубка этикеток, камера контроля, удаление облоя и намотка готового рулона">
+                <svg viewBox="0 0 800 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><g transform="translate(0 4)"><path class="i-h" d="M24 292H776"/><rect class="i-f i-s" x="448" y="80" width="8" height="212" rx="3"/><path class="i-f i-s" d="M552 206h16l18 86h-52z"/><rect class="i-sh" x="598" y="246" width="188" height="58" rx="6"/><rect class="i-f i-s" x="590" y="238" width="188" height="58" rx="6"/><rect class="i-die" x="631" y="242" width="64" height="50" rx="12"/><rect class="i-m" x="636" y="247" width="54" height="40" rx="8"/><circle class="i-wht" cx="653" cy="267" r="8"/><rect class="i-wht" x="667" y="261" width="16" height="5" rx="2.5"/><rect class="i-wht" x="667" y="270" width="11" height="5" rx="2.5" opacity="0.65"/><rect class="i-die" x="703" y="242" width="64" height="50" rx="12"/><rect class="i-y" x="708" y="247" width="54" height="40" rx="8"/><rect class="i-lt--ink" x="717" y="259" width="34" height="6" rx="3"/><rect class="i-lt--ink" x="717" y="271" width="22" height="5" rx="2.5" opacity="0.55"/><circle class="i-sh" cx="568" cy="214" r="56"/><circle class="i-f i-s" cx="560" cy="206" r="56"/><circle class="i-h" cx="560" cy="206" r="44"/><circle class="i-h" cx="560" cy="206" r="32"/><circle class="i-arc i-arc--m" cx="560" cy="206" r="56" stroke-dasharray="56 296" transform="rotate(150 560 206)"/><circle class="i-gr i-s" cx="560" cy="206" r="15"/><circle class="i-k" cx="560" cy="206" r="5"/><rect class="i-sh" x="120" y="248" width="186" height="38" rx="10"/><rect class="i-f i-s" x="136" y="64" width="136" height="186" rx="10"/><rect class="i-f i-s" x="112" y="240" width="186" height="38" rx="10"/><rect class="i-k" x="130" y="278" width="22" height="14" rx="3"/><rect class="i-k" x="258" y="278" width="22" height="14" rx="3"/><path class="i-arm" d="M252 78L322 54"/><circle class="i-sf i-s" cx="322" cy="54" r="28"/><circle class="i-h" cx="322" cy="54" r="18"/><circle class="i-k" cx="322" cy="54" r="4"/><path class="i-s" d="M440 87H448"/><path class="i-beam" d="M403 113h16l13 33h-42z"/><rect class="i-sh" x="390" y="78" width="58" height="34" rx="8"/><rect class="i-f i-s" x="382" y="70" width="58" height="34" rx="8"/><rect class="i-k" x="401" y="104" width="20" height="9" rx="2"/><circle class="i-c" cx="398" cy="87" r="5"/><rect class="i-sf" x="410" y="84" width="20" height="6" rx="3"/><path class="i-wo" d="M24 150H246"/><path class="i-wb" d="M24 150H246"/><path class="i-ink i-ink--c" d="M30 150h7"/><path class="i-ink i-ink--m" d="M40 150h7"/><path class="i-ink i-ink--y" d="M50 150h7"/><path class="i-ink i-ink--k" d="M60 150h7"/><path class="i-ink i-ink--c" d="M70 150h7"/><path class="i-ink i-ink--m" d="M80 150h7"/><path class="i-ink i-ink--y" d="M90 150h7"/><path class="i-ink i-ink--k" d="M100 150h7"/><path class="i-ink i-ink--c" d="M110 150h7"/><path class="i-ink i-ink--m" d="M120 150h7"/><path class="i-ink i-ink--y" d="M130 150h7"/><path class="i-ink i-ink--k" d="M140 150h7"/><path class="i-wo" d="M244 150H560"/><path class="i-wl" d="M244 150H560"/><path class="i-wlab" d="M250 150H560"/><path class="i-wo" d="M244 150C278 150 294 112 294 54"/><path class="i-wm" d="M244 150C278 150 294 112 294 54"/><circle class="i-f i-s" cx="200" cy="112" r="34"/><circle class="i-die" cx="200" cy="112" r="25"/><circle class="i-k" cx="200" cy="112" r="5"/><circle class="i-f i-s" cx="200" cy="182" r="28"/><circle class="i-k" cx="200" cy="182" r="5"/></g></svg>
+              </div>
+              <figcaption class="kit__label">Вырубка и&nbsp;намотка</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="proof__foot press__foot">
+          <span class="colorbar" aria-hidden="true"><i style="background:#00a7e1"></i><i style="background:#e4007c"></i><i style="background:#ffc600"></i><i style="background:#181143"></i><i style="background:#00006d"></i><i style="background:#e40000"></i><i style="background:#008200"></i><i style="background:#7fd3f0"></i><i style="background:#f17fbd"></i><i style="background:#ffe27f"></i></span>
+          <span class="proof__slug">[ФОТО ПЕЧАТИ И ВЫРУБКИ]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="materials">
+    <div class="shell">
+      <div class="section__head">
+        <h2>Основа под любой продукт и условия</h2>
+        <p class="lead">Подберём материал под поверхность, способ нанесения и условия эксплуатации: от морозильной камеры до улицы.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card peel">
+          <div class="swatches" aria-hidden="true">
+            <span class="swatch swatch--paper-gloss"></span>
+            <span class="swatch swatch--paper-matte"></span>
+            <span class="swatch swatch--paper-semi"></span>
+          </div>
+          <h3 class="card__title">Бумага</h3>
+          <p>Классика этикетки: точная цветопередача и аккуратный вид на любой упаковке.</p>
+          <ul class="pills">
+            <li>Глянцевая</li>
+            <li>Матовая</li>
+            <li>Полуглянцевая</li>
+          </ul>
+        </article>
+
+        <article class="card peel">
+          <div class="swatches" aria-hidden="true">
+            <span class="swatch swatch--clear"></span>
+            <span class="swatch swatch--metal"></span>
+            <span class="swatch swatch--film-white"></span>
+          </div>
+          <h3 class="card__title">Плёнки</h3>
+          <p>Прочные и влагостойкие основы для сложных условий и эффекта «no label».</p>
+          <ul class="pills">
+            <li>Прозрачная</li>
+            <li>Белая</li>
+            <li>Металлизированная</li>
+            <li>PE</li>
+            <li>PP</li>
+            <li>PET</li>
+          </ul>
+        </article>
+
+        <article class="card peel">
+          <div class="swatches" aria-hidden="true">
+            <span class="swatch swatch--holo"></span>
+            <span class="swatch swatch--fluo"></span>
+            <span class="swatch swatch--thermo"></span>
+          </div>
+          <h3 class="card__title">Специальные материалы</h3>
+          <p>Эффектные решения, когда этикетка должна удивлять и запоминаться.</p>
+          <ul class="pills">
+            <li>Термохромные</li>
+            <li>Флуоресцентные</li>
+            <li>Голографические</li>
+            <li>Винтажные</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--white" id="services">
+    <div class="shell">
+      <div class="section__head">
+        <h2>Комплекс услуг «под ключ»</h2>
+        <p class="lead">Берём на себя весь путь: от подготовки макета до готового рулона этикеток.</p>
+      </div>
+
+      <div class="line" data-animate-line>
+        <svg class="line__web" viewBox="0 0 1312 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path class="line__path" d="M24 20H1282" stroke="#181143" stroke-width="2.5"/>
+          <path class="line__arrow" d="M1282 11l22 9-22 9z" fill="#181143"/>
+          <circle cx="12" cy="20" r="10" fill="#F6F5F1" stroke="#181143" stroke-width="2.5"/>
+          <circle cx="12" cy="20" r="3.5" fill="#181143"/>
+          <g class="line__node">
+            <circle cx="155" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+            <circle cx="155" cy="20" r="4" fill="#E4007C"/>
+          </g>
+          <g class="line__node">
+            <circle cx="489" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+            <circle cx="489" cy="20" r="4" fill="#E4007C"/>
+          </g>
+          <g class="line__node">
+            <circle cx="823" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+            <circle cx="823" cy="20" r="4" fill="#E4007C"/>
+          </g>
+          <g class="line__node">
+            <circle cx="1157" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+            <circle cx="1157" cy="20" r="4" fill="#E4007C"/>
+          </g>
+        </svg>
+
+        <ol class="stations">
+          <li class="station">
+            <span class="station__num">01</span>
+            <h3 class="station__title">Макет и допечатная подготовка</h3>
+            <p>Поможем с дизайном и доведём файл до идеального состояния перед печатью.</p>
+          </li>
+          <li class="station">
+            <span class="station__num">02</span>
+            <h3 class="station__title">Печать</h3>
+            <p>Цифровая или флексопечать: подберём технологию под ваш тираж и бюджет.</p>
+          </li>
+          <li class="station">
+            <span class="station__num">03</span>
+            <h3 class="station__title">Лакирование</h3>
+            <p>Сплошное или выборочное: защита от влаги, истирания и УФ-лучей.</p>
+          </li>
+          <li class="station">
+            <span class="station__num">04</span>
+            <h3 class="station__title">Вырубка и намотка</h3>
+            <p>Любой контур этикетки — и намотка в готовые к поклейке рулоны.</p>
+          </li>
+        </ol>
+
+        <p class="line__note">
+          <svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 6.5" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Контроль качества на каждой стадии: вы получаете ровно то, что утвердили на цветопробе. Подбор материала и технологии — часть расчёта.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--ink" id="products">
+    <div class="shell">
+      <div class="section__head">
+        <h2>Этикетки для вашего бизнеса</h2>
+        <p class="lead">Решаем задачи любых отраслей: от продуктов питания до промышленной маркировки.</p>
+      </div>
+
+      <div class="grid grid--4">
+        <article class="card card--dark peel peel--dark">
+          <div class="card__art">
+            <svg viewBox="0 0 260 130" width="100%" height="130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="62" y="14" width="118" height="100" rx="10" fill="#FFFFFF"/>
+              <path d="M62 24a10 10 0 0 1 10-10h98a10 10 0 0 1 10 10v18H62V24z" fill="#E4007C"/>
+              <rect x="76" y="54" width="80" height="8" rx="4" fill="#181143"/>
+              <rect x="76" y="70" width="56" height="6" rx="3" fill="#9B97BE"/>
+              <rect x="76" y="82" width="66" height="6" rx="3" fill="#9B97BE"/>
+              <rect x="76" y="96" width="40" height="8" rx="4" fill="#181143" opacity="0.85"/>
+              <circle cx="196" cy="96" r="20" fill="#00A7E1"/>
+              <g stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"><path d="M196 86v20"/><path d="M187 91l18 10"/><path d="M205 91l-18 10"/></g>
+            </svg>
+          </div>
+          <h3 class="card__title card__title--sm">Продукты питания</h3>
+          <p>Этикетки для любых условий хранения — включая морозостойкие и влагостойкие.</p>
+        </article>
+
+        <article class="card card--dark peel peel--dark">
+          <div class="card__art">
+            <svg viewBox="0 0 260 130" width="100%" height="130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <g transform="rotate(8 140 62)">
+                <rect x="84" y="26" width="116" height="72" rx="12" fill="#E3D3B1"/>
+                <circle cx="104" cy="62" r="7" fill="#181143" opacity="0.85"/>
+                <circle cx="104" cy="62" r="3" fill="#E3D3B1"/>
+                <rect x="122" y="46" width="58" height="8" rx="4" fill="#181143"/>
+                <rect x="122" y="62" width="40" height="6" rx="3" fill="#181143" opacity="0.5"/>
+                <rect x="122" y="76" width="48" height="6" rx="3" fill="#181143" opacity="0.35"/>
+                <path d="M104 62C74 76 66 96 48 104" stroke="#9B97BE" stroke-width="2.5" fill="none"/>
+              </g>
+            </svg>
+          </div>
+          <h3 class="card__title card__title--sm">Одежда и аксессуары</h3>
+          <p>Бирки и ярлыки, которые подчёркивают характер бренда.</p>
+        </article>
+
+        <article class="card card--dark peel peel--dark">
+          <div class="card__art">
+            <svg viewBox="0 0 260 130" width="100%" height="130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="112" cy="66" r="46" fill="#FFC600"/>
+              <circle cx="112" cy="66" r="35" fill="none" stroke="#181143" stroke-width="2" stroke-dasharray="6 5"/>
+              <text x="112" y="78" text-anchor="middle" font-family="'Unbounded', sans-serif" font-weight="700" font-size="30" fill="#181143">%</text>
+              <circle cx="181" cy="84" r="27" fill="#E4007C"/>
+              <path d="M181 68l4.6 9.7 9.7 4.6-9.7 4.6-4.6 9.7-4.6-9.7-9.7-4.6 9.7-4.6 4.6-9.7z" fill="#FFFFFF"/>
+            </svg>
+          </div>
+          <h3 class="card__title card__title--sm">Акции и ивенты</h3>
+          <p>Яркие стикеры для промо, упаковки подарков и мероприятий.</p>
+        </article>
+
+        <article class="card card--dark peel peel--dark">
+          <div class="card__art">
+            <svg viewBox="0 0 260 130" width="100%" height="130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect x="58" y="22" width="144" height="86" rx="12" fill="none" stroke="#E4007C" stroke-width="2" stroke-dasharray="6 5"/>
+              <rect x="68" y="32" width="124" height="66" rx="8" fill="#FFFFFF"/>
+              <path d="M104 44l14 5v11c0 9-6 14-14 17-8-3-14-8-14-17V49l14-5z" fill="none" stroke="#181143" stroke-width="2.6" stroke-linejoin="round"/>
+              <path d="M97 60l5 5 9-10" stroke="#960666" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="130" y="48" width="48" height="7" rx="3.5" fill="#181143"/>
+              <rect x="130" y="63" width="34" height="6" rx="3" fill="#9B97BE"/>
+              <rect x="130" y="76" width="42" height="6" rx="3" fill="#9B97BE"/>
+            </svg>
+          </div>
+          <h3 class="card__title card__title--sm">Специальные свойства</h3>
+          <p>Для наружного применения, с защитой от вскрытия и другими опциями.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-wrap" id="order" aria-labelledby="order-title">
+    <div class="shell">
+      <div class="cta order">
+        <svg class="cta__mark" viewBox="0 0 120 120" width="120" height="120" fill="none" aria-hidden="true">
+          <circle cx="60" cy="60" r="30" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+          <path d="M60 14v92M14 60h92" stroke="#FFFFFF" stroke-width="2"/>
+        </svg>
+        <div class="order__aside">
+          <h2 class="cta__title" id="order-title">Создадим этикетку, которую захотят рассмотреть, потрогать и&nbsp;купить</h2>
+          <p class="order__lead">Готовы к&nbsp;яркому впечатлению? Пришлите макет&nbsp;— оперативно вернёмся с&nbsp;расчётом, вариантами материалов и&nbsp;цветопробой.</p>
+          <ol class="order-steps">
+            <li><span class="order-steps__num">01</span><span><strong>Отправьте макет</strong>Через форму или на&nbsp;почту. Макета ещё нет&nbsp;— поможем с&nbsp;дизайном.</span></li>
+            <li><span class="order-steps__num">02</span><span><strong>Получите расчёт</strong>Менеджер подберёт материал и&nbsp;технологию и&nbsp;оперативно посчитает стоимость тиража.</span></li>
+            <li><span class="order-steps__num">03</span><span><strong>Утвердите цветопробу</strong>Цифровую или физическую. После утверждения запускаем тираж&nbsp;— точно в&nbsp;срок.</span></li>
+          </ol>
+          <p class="order__mail">Удобнее почтой? <a href="mailto:info@fb-print.ru">info@fb-print.ru</a></p>
+        </div>
+
+        <!-- Обработчик send.php ещё не создан: план — PHP на хостинге reg.ru с отправкой через SMTP -->
+        <form class="order-card" action="send.php" method="post" enctype="multipart/form-data" data-form>
+          <input type="hidden" name="form" value="Заявка на расчёт">
+          <div class="hp" aria-hidden="true"><label for="f-website">Не заполняйте это поле</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+          <div class="order-card__body" data-form-body>
+            <div class="order-card__head">
+              <h3 class="order-card__title">Заявка на&nbsp;расчёт</h3>
+              <p>Достаточно имени и&nbsp;контакта&nbsp;— детали менеджер уточнит сам.</p>
+            </div>
+
+            <div class="order-card__grid">
+              <div class="field">
+                <label for="f-name">Имя <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Как к вам обращаться">
+              </div>
+              <div class="field">
+                <label for="f-contact">Телефон или e-mail <span class="req" aria-hidden="true">*</span></label>
+                <input id="f-contact" name="contact" type="text" required placeholder="+7 или name@company.ru">
+              </div>
+            </div>
+
+            <fieldset class="order-card__more">
+              <legend class="order-card__group">Детали заказа <span>необязательно</span></legend>
+              <div class="field">
+                <span class="field__label" id="f-file-label">Макет</span>
+                <input class="file-input" id="f-file" name="layout[]" type="file" multiple accept=".pdf,.ai,.eps,.cdr,.svg,.tif,.tiff,.psd,.jpg,.jpeg,.png,.zip,.rar" aria-labelledby="f-file-label">
+                <label class="drop" for="f-file">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V4M7.5 8.5L12 4l4.5 4.5M4 15v3.5A1.5 1.5 0 0 0 5.5 20h13a1.5 1.5 0 0 0 1.5-1.5V15"/></svg>
+                  <span><span class="drop__title">Прикрепить файл</span> <span class="drop__hint" data-file-hint>PDF, AI, EPS, CDR, TIFF или архив</span></span>
+                </label>
+              </div>
+
+              <div class="field">
+                <label for="f-company">Компания или бренд</label>
+                <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="Название">
+              </div>
+
+              <div class="choice" role="group" aria-labelledby="f-product-label">
+                <p class="choice__label" id="f-product-label">Что маркируем</p>
+                <div class="choice__opts">
+                  <label class="opt"><input type="radio" name="product" value="Продукты питания"><span>Продукты питания</span></label>
+                  <label class="opt"><input type="radio" name="product" value="Одежда и аксессуары"><span>Одежда и&nbsp;аксессуары</span></label>
+                  <label class="opt"><input type="radio" name="product" value="Акции и ивенты"><span>Акции и&nbsp;ивенты</span></label>
+                  <label class="opt"><input type="radio" name="product" value="Специальные свойства"><span>Специальные свойства</span></label>
+                  <label class="opt"><input type="radio" name="product" value="Другое"><span>Другое</span></label>
+                </div>
+              </div>
+
+              <div class="choice" role="group" aria-labelledby="f-material-label">
+                <p class="choice__label" id="f-material-label">Материал</p>
+                <div class="choice__opts">
+                  <label class="opt"><input type="radio" name="material" value="Бумага"><span>Бумага</span></label>
+                  <label class="opt"><input type="radio" name="material" value="Плёнка"><span>Плёнка</span></label>
+                  <label class="opt"><input type="radio" name="material" value="Специальный"><span>Специальный</span></label>
+                  <label class="opt"><input type="radio" name="material" value="Нужна консультация"><span>Подскажите</span></label>
+                </div>
+              </div>
+
+              <div class="field">
+                <label for="f-run">Ориентировочный тираж</label>
+                <input id="f-run" name="run" type="text" placeholder="Сколько этикеток нужно">
+              </div>
+
+
+              <div class="field">
+                <label for="f-comment">Комментарий</label>
+                <textarea id="f-comment" name="comment" rows="3" placeholder="Размер, форма, условия хранения, сроки"></textarea>
+              </div>
+            </fieldset>
+
+            <label class="consent">
+              <input type="checkbox" name="consent" value="yes" required>
+              <span class="consent__box" aria-hidden="true"></span>
+              <span>Согласен на&nbsp;обработку персональных данных по&nbsp;<a class="link-underline" href="#">[ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ]</a></span>
+            </label>
+
+            <div class="order-card__submit">
+              <button class="btn btn--ink btn--lg" type="submit">
+                <span class="btn__label">Отправить макет на&nbsp;расчёт</span>
+                <svg class="btn__arrow" viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="form-sent" data-form-sent tabindex="-1" hidden>
+            <p class="form-sent__title">Заявка отправлена</p>
+            <p>Спасибо! Менеджер свяжется с&nbsp;вами и&nbsp;пришлёт расчёт. Если нужно что-то добавить, напишите на&nbsp;<a class="link-underline" href="mailto:info@fb-print.ru">info@fb-print.ru</a>.</p>
+          </div>
+
+          <p class="slug" aria-hidden="true">
+            <span>FB-print · заявка на&nbsp;расчёт</span>
+            <span class="slug__sign">Утверждено <span class="slug__line"><img class="slug__stamp" data-stamp src="assets/logo-full.svg" alt="" width="96" height="91" hidden></span></span>
+          </p>
+        </form>
+
+        <span class="cta__bar" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <div class="brand brand--footer">
+          <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="118" height="52">
+          <span class="brand__name">FB-print</span>
+        </div>
+        <p>Типография полного цикла: самоклеящиеся этикетки цифровой и флексопечатью, от макета до готового рулона.</p>
+      </div>
+
+      <div class="site-footer__cols">
+        <nav class="fcol" aria-label="Разделы">
+          <p class="fcol__title">Разделы</p>
+          <a href="#tech">Технологии</a>
+          <a href="#materials">Материалы</a>
+          <a href="#services">Услуги</a>
+          <a href="#products">Продукция</a>
+        </nav>
+        <div class="fcol">
+          <p class="fcol__title">Продукция</p>
+          <span>Продукты питания</span>
+          <span>Одежда и аксессуары</span>
+          <span>Акции и ивенты</span>
+          <span>Специальные этикетки</span>
+        </div>
+        <address class="fcol">
+          <p class="fcol__title">Контакты</p>
+          <a class="fcol__mail" href="mailto:info@fb-print.ru">info@fb-print.ru</a>
+          <!-- TODO: заменить плейсхолдеры реальными данными (телефон, адрес производства) -->
+          <span class="placeholder">[ТЕЛЕФОН]</span>
+          <span class="placeholder">[АДРЕС ПРОИЗВОДСТВА]</span>
+          <span>Работаем по всей России</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© 2026 FB-print · Самоклеящиеся этикетки</span>
+      <span class="cmyk-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FB-print",
+  "description": "Типография полного цикла: производство самоклеящихся этикеток цифровой и флексопечатью.",
+  "email": "info@fb-print.ru",
+  "areaServed": "RU"
+}
+</script>
+<script src="main.js" defer></script>
+</body>
+</html>
