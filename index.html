@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#f6f5f1">
 <title>FB-print — самоклеящиеся этикетки на заказ</title>
 <meta name="description" content="Типография полного цикла FB-print: самоклеящиеся этикетки цифровой и флексопечатью. Любые материалы, лакирование, вырубка любой формы, цветопроба до тиража. Работаем по всей России.">
+<meta name="robots" content="noindex, nofollow">
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ru_RU">
@@ -265,16 +266,6 @@
     </div>
   </section>
 
-  <!--
-    ВИДЕО ИЗГОТОВЛЕНИЯ ФОРМ (assets/plate-*). Кадры из видео «Как это работает #6.
-    Процесс изготовления цифровых форм высокой печати» (файл владельца). Владелец, 2026-10-09:
-    «Формы делаем сами, видео можно использовать». В кадрах нет лиц, титров и логотипов.
-    Все четыре кадра — живые вставки plate-*.webm/.mp4 (вперёд и назад, без звука) с постером plate-*-800.jpg.
-    Планы: запись 0:45.04–0:48.96, экспонирование 2:32.90–2:37.32, вымывка 3:13.45–3:17.03, рельеф 3:20.92–3:24.56.
-    ВРЕМЕННЫЕ ИЛЛЮСТРАЦИИ ОБОРУДОВАНИЯ: флексопечать, контроль цвета, вырубка и намотка.
-    Векторные схемы в стиле исходной иллюстрации, без марок и логотипов. Помечены заглушкой
-    [ФОТО ПЕЧАТИ И ВЫРУБКИ]. Перед запуском заменить на фото производства и убрать заглушку.
-  -->
   <section class="section section--ink" id="equipment" aria-labelledby="equipment-title">
     <div class="shell">
       <div class="section__head">
@@ -554,7 +545,6 @@
           <p class="order__mail">Удобнее почтой? <a href="mailto:info@fb-print.ru">info@fb-print.ru</a></p>
         </div>
 
-        <!-- Обработчик send.php ещё не создан: план — PHP на хостинге reg.ru с отправкой через SMTP -->
         <form class="order-card" action="send.php" method="post" enctype="multipart/form-data" data-form>
           <input type="hidden" name="form" value="Заявка на расчёт">
           <div class="hp" aria-hidden="true"><label for="f-website">Не заполняйте это поле</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
@@ -687,7 +677,6 @@
         <address class="fcol">
           <p class="fcol__title">Контакты</p>
           <a class="fcol__mail" href="mailto:info@fb-print.ru">info@fb-print.ru</a>
-          <!-- TODO: заменить плейсхолдеры реальными данными (телефон, адрес производства) -->
           <span class="placeholder">[ТЕЛЕФОН]</span>
           <span class="placeholder">[АДРЕС ПРОИЗВОДСТВА]</span>
           <span>Работаем по всей России</span>
