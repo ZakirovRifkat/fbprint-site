@@ -1,0 +1,27 @@
+<section class="section section--white" id="services">
+  <div class="shell">
+    <div class="section__head">
+      <h2>{{ t.services.title }}</h2>
+      <p class="lead">{{ t.services.lead }}</p>
+    </div>
+
+    <div class="line" data-animate-line>
+      {% include "art/services-line.svg" %}
+
+      <ol class="stations">
+        {%- for s in t.services.stations %}
+        <li class="station">
+          <span class="station__num">0{{ loop.index }}</span>
+          <h3 class="station__title">{{ s.title }}</h3>
+          <p>{{ s.text }}</p>
+        </li>
+        {%- endfor %}
+      </ol>
+
+      <p class="line__note">
+        {% check 18 %}
+        {{ t.services.note }}
+      </p>
+    </div>
+  </div>
+</section>

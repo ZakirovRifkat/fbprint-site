@@ -1,0 +1,53 @@
+{%- set h = t.hero -%}
+{%- set p = t.proof -%}
+<section class="hero">
+  <div class="shell hero__inner">
+    <div class="hero__text">
+      <h1 class="hero__title">{{ h.title }}</h1>
+      <p class="lead">{{ h.lead }}</p>
+
+      <div class="hero__actions">
+        <a class="btn btn--ink btn--lg" href="#order">
+          {{ t.common.cta }}
+          {% arrow %}
+        </a>
+        <p class="hero__mail">{{ h.mail }} <a class="link-underline" href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+
+      <p class="hero__more"><a class="link-underline hero__link" href="#services">{{ h.how }}</a></p>
+
+      <ul class="chips">
+        {%- for chip in h.chips %}
+        <li class="chip">{% check 15 %}{{ chip }}</li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <figure class="proof hero__art" data-proof>
+      <div class="proof__sheet">
+        <div class="proof__label" data-label tabindex="0" role="img" aria-label="{{ p.label }}">
+          {% include "parts/marks.njk" %}
+          {% include "art/proof-label.svg" %}
+        </div>
+
+        <div class="inks" role="group" aria-label="{{ p.inksLabel }}" data-proof-controls hidden>
+          <button class="ink" type="button" aria-pressed="true" data-ink="c"><span class="ink__chip" aria-hidden="true"></span>{{ p.inks.c }}</button>
+          <button class="ink" type="button" aria-pressed="true" data-ink="m"><span class="ink__chip" aria-hidden="true"></span>{{ p.inks.m }}</button>
+          <button class="ink" type="button" aria-pressed="true" data-ink="y"><span class="ink__chip" aria-hidden="true"></span>{{ p.inks.y }}</button>
+          <button class="ink" type="button" aria-pressed="true" data-ink="k"><span class="ink__chip" aria-hidden="true"></span><span class="ink__name ink__name--light">{{ p.inks.k }}</span><span class="ink__name ink__name--dark">{{ p.inks.kDark }}</span></button>
+        </div>
+
+        <div class="proof__foot" aria-hidden="true">
+          <span class="colorbar">
+            <i style="background:#00a7e1"></i><i style="background:#e4007c"></i><i style="background:#ffc600"></i><i style="background:#181143"></i><i style="background:#00006d"></i><i style="background:#e40000"></i><i style="background:#008200"></i><i style="background:#7fd3f0"></i><i style="background:#f17fbd"></i><i style="background:#ffe27f"></i>
+          </span>
+          <span class="proof__slug">{{ p.slug }}</span>
+        </div>
+      </div>
+
+      <figcaption class="proof__caption">
+        <p class="proof__hint" data-proof-hint>{{ p.hint }} <span class="proof__hint-pointer" data-proof-howto hidden>{{ p.howtoPointer }}</span><span class="proof__hint-touch" data-proof-howto hidden>{{ p.howtoTouch }}</span></p>
+      </figcaption>
+    </figure>
+  </div>
+</section>

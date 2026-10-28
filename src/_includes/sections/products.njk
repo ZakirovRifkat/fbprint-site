@@ -1,0 +1,20 @@
+<section class="section section--ink" id="products">
+  <div class="shell">
+    <div class="section__head">
+      <h2>{{ t.products.title }}</h2>
+      <p class="lead">{{ t.products.lead }}</p>
+    </div>
+
+    <div class="grid grid--4">
+      {%- for card in t.products.cards %}
+      <article class="card card--dark peel peel--dark">
+        <div class="card__art">
+          {% include "art/product-" + card.art + ".svg" %}
+        </div>
+        <h3 class="card__title card__title--sm">{{ card.title }}</h3>
+        <p>{{ card.text }}</p>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

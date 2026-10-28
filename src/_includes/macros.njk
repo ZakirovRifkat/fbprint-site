@@ -1,0 +1,7 @@
+{# Карточка цеха: беззвучная видеопетля с постером. Крутится, только пока видна (main.js) #}
+{% macro video(name, alt, caption) %}
+<figure class="kit">
+  <div class="kit__photo"><video muted loop playsinline preload="none" poster="assets/{{ name }}-800.jpg" width="640" height="480" aria-label="{{ alt }}" data-autoplay><source src="assets/{{ name }}.webm" type="video/webm"><source src="assets/{{ name }}.mp4" type="video/mp4"></video></div>
+  <figcaption class="kit__label">{{ caption }}</figcaption>
+</figure>
+{% endmacro %}

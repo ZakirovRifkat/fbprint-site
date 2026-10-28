@@ -1,0 +1,49 @@
+{%- set base = '' if home else './' -%}
+{%- set f = t.footer -%}
+<footer class="site-footer">
+  <div class="shell">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <div class="brand brand--footer">
+          <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="118" height="52">
+          <span class="brand__name">FB-print</span>
+        </div>
+        <p>{{ f.about }}</p>
+      </div>
+
+      <div class="site-footer__cols">
+        <nav class="fcol" aria-label="{{ f.sectionsTitle }}">
+          <p class="fcol__title">{{ f.sectionsTitle }}</p>
+          {%- for s in t.sections %}
+          <a href="{{ base }}#{{ s.id }}">{{ s.name }}</a>
+          {%- endfor %}
+        </nav>
+        <div class="fcol">
+          <p class="fcol__title">{{ f.productsTitle }}</p>
+          {%- for p in f.products %}
+          <span>{{ p }}</span>
+          {%- endfor %}
+        </div>
+        <address class="fcol">
+          <p class="fcol__title">{{ f.contactsTitle }}</p>
+          <a class="fcol__mail" href="mailto:{{ site.email }}">{{ site.email }}</a>
+          <a href="tel:{{ site.phoneHref }}">{{ site.phone }}</a>
+          <span>{{ f.region }}</span>
+        </address>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="site-footer__legal">
+        <span>{{ f.copyright }}</span>
+        <span>{{ f.company }}</span>
+        <span>{{ f.address }}</span>
+      </div>
+      <nav class="site-footer__docs" aria-label="{{ f.docsLabel }}">
+        <a href="privacy.html"{% if page.url == '/privacy.html' %} aria-current="page"{% endif %}>{{ f.privacy }}</a>
+        <a href="consent.html"{% if page.url == '/consent.html' %} aria-current="page"{% endif %}>{{ f.consent }}</a>
+      </nav>
+      <span class="cmyk-dots" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+  </div>
+</footer>

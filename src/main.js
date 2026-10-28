@@ -8,6 +8,10 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+  /* Надписи на языке страницы: сборка кладёт их в <script id="ui-text"> */
+  var ui = {};
+  try { ui = JSON.parse(document.getElementById('ui-text').textContent); } catch (e) {}
+
   /* Мобильное меню */
   var burger = document.querySelector('.burger');
   var menu = document.getElementById('site-menu');
@@ -16,7 +20,7 @@
     var setOpen = function (open) {
       menu.classList.toggle('is-open', open);
       burger.setAttribute('aria-expanded', String(open));
-      burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+      burger.setAttribute('aria-label', open ? ui.menuClose : ui.menuOpen);
     };
 
     burger.addEventListener('click', function () {
@@ -50,7 +54,7 @@
     var syncTheme = function () {
       var dark = isDark();
       themeButton.setAttribute('aria-pressed', String(dark));
-      themeButton.title = dark ? 'Светлая тема' : 'Тёмная тема';
+      themeButton.title = dark ? ui.themeLight : ui.themeDark;
       if (chrome) chrome.setAttribute('content', dark ? '#181143' : '#f6f5f1');
     };
     themeButton.hidden = false;
@@ -134,7 +138,7 @@
         if (submit) submit.disabled = busy;
         if (busy) form.setAttribute('aria-busy', 'true');
         else form.removeAttribute('aria-busy');
-        if (label) label.textContent = busy ? 'Отправляем' : idle;
+        if (label) label.textContent = busy ? ui.sending : idle;
       };
 
       form.addEventListener('submit', function (event) {
@@ -149,16 +153,24 @@
           headers: { 'Accept': 'application/json' }
         })
           .then(function (response) {
-            if (!response.ok) throw new Error('HTTP ' + response.status);
+            if (response.ok) return;
+            // send.php объясняет отказ: файл велик, формат не подходит
+            return response.json().catch(function () { return {}; }).then(function (data) {
+              var error = new Error('HTTP ' + response.status);
+              error.userMessage = data && data.message;
+              throw error;
+            });
+          })
+          .then(function () {
             setState('sent');
             if (body) body.hidden = true;
             if (sent) { sent.hidden = false; sent.focus(); }
             if (stamp) { stamp.hidden = false; stamp.classList.add('is-landing'); }
           })
-          .catch(function () {
+          .catch(function (error) {
             setState('error');
             if (status) {
-              status.textContent = 'Не получилось отправить заявку. Попробуйте ещё раз или напишите на info@fb-print.ru.';
+              status.textContent = (error && error.userMessage) || ui.sendError;
             }
           });
       });
@@ -559,7 +571,7 @@
     .catch(function () {
       loupe.remove();
       Array.prototype.forEach.call(proof.querySelectorAll('[data-proof-howto]'), function (el) {
-        el.textContent = 'Отключите краску, чтобы увидеть, из чего складывается цвет на оттиске.';
+        el.textContent = ui.proofFallback;
       });
     });
 })();

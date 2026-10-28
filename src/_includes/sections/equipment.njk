@@ -1,0 +1,46 @@
+{% import "macros.njk" as kit %}
+{%- set e = t.equipment -%}
+<section class="section section--ink" id="equipment" aria-labelledby="equipment-title">
+  <div class="shell">
+    <div class="section__head">
+      <h2 id="equipment-title">{{ e.title }}</h2>
+      <p class="lead">{{ e.lead }}</p>
+    </div>
+
+    <div class="press">
+      <div class="press__trim">
+        {% include "parts/marks.njk" %}
+        <div class="kit-grid">
+          <div class="kit-strip">
+            {%- for v in e.videos %}
+            {{ kit.video(v.file, v.alt, v.caption) }}
+            {%- endfor %}
+          </div>
+          <figure class="kit kit--wide">
+            <div class="kit__art" role="img" aria-label="{{ e.flexo.label }}">
+              {% include "art/equipment-flexo.svg" %}
+            </div>
+            <figcaption class="kit__label">{{ e.flexo.caption }}</figcaption>
+          </figure>
+          <figure class="kit kit--tall">
+            <div class="kit__art" role="img" aria-label="{{ e.control.label }}">
+              {% include "art/equipment-sheet.svg" %}
+              {% include "art/equipment-fan.svg" %}
+            </div>
+            <figcaption class="kit__label">{{ e.control.caption }}</figcaption>
+          </figure>
+          <figure class="kit kit--wide">
+            <div class="kit__art" role="img" aria-label="{{ e.diecut.label }}">
+              {% include "art/equipment-diecut.svg" %}
+            </div>
+            <figcaption class="kit__label">{{ e.diecut.caption }}</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="proof__foot press__foot">
+        {% include "parts/colorbar.njk" %}
+        <span class="proof__slug">{{ e.slug }}</span>
+      </div>
+    </div>
+  </div>
+</section>

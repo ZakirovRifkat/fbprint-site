@@ -44,6 +44,74 @@
   --ease-draw: cubic-bezier(0.3, 0, 0.2, 1);
 }
 
+/* ---------- Шрифты ----------
+   Файлы лежат на своём хостинге: браузер посетителя не обращается к Google. */
+
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/golos-text-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/golos-text-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/golos-text-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('assets/fonts/golos-text-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('assets/fonts/unbounded-cyrillic-ext.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('assets/fonts/unbounded-cyrillic.woff2') format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('assets/fonts/unbounded-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Unbounded';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('assets/fonts/unbounded-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* ---------- Основа ---------- */
 
 *,
@@ -103,6 +171,9 @@ a:hover { color: var(--accent-deep); }
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
+
+/* Название с дефисом не переносится по строкам */
+.nobr { white-space: nowrap; }
 
 .visually-hidden {
   position: absolute;
@@ -694,7 +765,7 @@ a:hover { color: var(--accent-deep); }
   border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-block: 22px 28px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   flex-wrap: wrap;
   font-size: 13.5px;
@@ -706,6 +777,96 @@ a:hover { color: var(--accent-deep); }
 .cmyk-dots i:nth-child(2) { background: var(--accent); }
 .cmyk-dots i:nth-child(3) { background: var(--yellow); }
 .cmyk-dots i:nth-child(4) { background: rgba(255, 255, 255, 0.35); }
+
+/* Реквизиты и документы о персональных данных */
+.site-footer__legal,
+.site-footer__docs {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.site-footer__legal { flex: 1 1 320px; min-width: 0; }
+.site-footer__docs { margin-left: auto; }
+.site-footer__docs + .cmyk-dots { margin-left: 8px; margin-top: 3px; }
+
+@media (max-width: 720px) {
+  .site-footer__docs { margin-left: 0; }
+}
+
+/* ---------- Документы: политика и согласие ---------- */
+
+.doc-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.doc-back + .theme-toggle { margin-left: 0; }
+
+/* Узкий экран: от ссылки остаётся круглая кнопка со стрелкой, как у переключателя темы */
+@media (max-width: 480px) {
+  .doc-back {
+    justify-content: center;
+    width: 44px; height: 44px;
+    border: 1.5px solid var(--chip-border);
+    border-radius: 50%;
+  }
+  .doc-back__text {
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}
+
+.doc { padding-block: clamp(40px, 6vw, 72px) var(--section-y); }
+.doc__shell { max-width: calc(780px + 2 * var(--gutter)); }
+.doc__title {
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 600;
+  font-size: clamp(26px, 3.4vw, 40px);
+  line-height: 1.18;
+}
+.doc__meta { margin-top: 14px; font-size: 15px; color: var(--text-muted); }
+
+.doc__body {
+  margin-top: clamp(28px, 4vw, 40px);
+  color: var(--text);
+  line-height: 1.65;
+}
+.doc__body h2 {
+  margin: 36px 0 12px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--ink);
+}
+.doc__body h3 {
+  margin: 24px 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.doc__body strong { font-weight: 600; color: var(--ink); }
+.doc__body p + p,
+.doc__body p + ul,
+.doc__body ul + p { margin-top: 10px; }
+.doc__body li { position: relative; padding-left: 22px; }
+.doc__body li + li { margin-top: 6px; }
+.doc__body li::before {
+  content: "";
+  position: absolute;
+  left: 4px; top: 0.8em;
+  width: 8px; height: 2px;
+  background: var(--accent);
+}
+.doc .placeholder { color: var(--accent-deep); font-weight: 600; }
+.doc__url { white-space: nowrap; }
 
 /* ---------- Пробный оттиск ---------- */
 
@@ -1003,7 +1164,17 @@ a:hover { color: var(--accent-deep); }
 .consent input:checked + .consent__box::after { transform: rotate(45deg) scale(1); }
 .consent input:focus-visible + .consent__box { outline: 2.5px solid var(--accent); outline-offset: 3px; }
 .consent input:user-invalid + .consent__box { border-color: var(--error); }
-.consent .link-underline { font-weight: 500; border-bottom-width: 1px; }
+.consent .link-underline,
+.consent-note .link-underline { font-weight: 500; border-bottom-width: 1px; }
+
+/* Ссылка на политику — отдельно от галочки: согласие не смешивается с другими документами */
+.consent-group { display: grid; gap: 6px; }
+.consent-note {
+  padding-left: 34px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
 
 /* Состояния отправки */
 .form-status:empty { display: none; }
@@ -1414,7 +1585,7 @@ a:hover { color: var(--accent-deep); }
   .hero__text .lead { order: 2; }
   .hero__actions { order: 3; gap: 12px 24px; }
   .proof { order: 4; margin-top: 4px; }
-  .hero__mail { order: 5; }
+  .hero__more { order: 5; }
   .chips { order: 6; gap: 6px; }
   .chip { padding: 7px 9px; gap: 6px; font-size: 13px; white-space: nowrap; }
 
@@ -1603,6 +1774,13 @@ a:hover { color: var(--accent-deep); }
 [data-theme="dark"] .cta { background: var(--deep); box-shadow: inset 0 0 0 1px var(--line); }
 [data-theme="dark"] .peel--dark::after { background: linear-gradient(315deg, var(--deep) 50%, #f1effa 52%, #9b97be 100%); }
 
+/* Документы */
+[data-theme="dark"] .doc-back,
+[data-theme="dark"] .doc__body h2,
+[data-theme="dark"] .doc__body h3,
+[data-theme="dark"] .doc__body strong { color: var(--on-ink); }
+[data-theme="dark"] .doc-back:hover { color: var(--accent-deep); }
+
 @media (max-width: 1000px) {
   [data-theme="dark"] .stations::before { background: var(--on-ink); }
   [data-theme="dark"] .station::before { background: var(--page-2); border-color: var(--on-ink); }
@@ -1628,4 +1806,51 @@ a:hover { color: var(--accent-deep); }
   @media (hover: hover) {
     .peel:hover { transform: none; }
   }
+}
+
+/* ---------- Печать документов ----------
+   Из этих правил собираются privacy.pdf и consent.pdf: только текст, чёрным по белому,
+   в любой теме сайта. */
+
+@media print {
+  @page {
+    size: A4;
+    margin: 18mm 18mm 20mm;
+    @bottom-left { content: "fb-print.ru"; font: 11px 'Golos Text', sans-serif; color: #666; }
+    @bottom-right { content: counter(page) " / " counter(pages); font: 11px 'Golos Text', sans-serif; color: #666; }
+  }
+
+  :root,
+  [data-theme="dark"] {
+    color-scheme: light;
+    --paper: #fff;
+    --ink: #000;
+    --text: #000;
+    --text-muted: #444;
+    --accent: #000;
+    --accent-deep: #000;
+  }
+  body,
+  [data-theme="dark"] body { background: #fff; color: #000; }
+
+  .skip-link,
+  .cmyk-bar,
+  .site-header,
+  .site-footer,
+  .doc__download { display: none !important; }
+
+  .doc { padding: 0; font-size: 14px; }
+  .doc__shell { max-width: none; padding: 0; }
+  .doc__title { font-size: 25px; line-height: 1.3; }
+  .doc__meta { margin-top: 8px; font-size: 12.5px; }
+  .doc__body { margin-top: 21px; line-height: 1.5; }
+  .doc__body h2,
+  [data-theme="dark"] .doc__body h2 { margin: 19px 0 7px; font-size: 16px; color: #000; break-after: avoid; }
+  .doc__body h3,
+  [data-theme="dark"] .doc__body h3 { margin: 12px 0 5px; font-size: 14.5px; color: #000; break-after: avoid; }
+  [data-theme="dark"] .doc__body strong { color: #000; }
+  .doc__body li { break-inside: avoid; }
+  .doc .placeholder { font-weight: 600; }
+  .link-underline,
+  [data-theme="dark"] .link-underline { color: #000; border-bottom: 1px solid #000; }
 }

@@ -3,3 +3,10 @@
 .impeccable/
 .playwright-mcp/
 PRODUCT.md
+
+# Пароль почтового ящика для send.php — только на хостинге
+config.php
+
+# Зависимости и результат сборки
+node_modules/
+_site/

@@ -1,0 +1,78 @@
+{%- set meta = t.pages[key] -%}
+<!doctype html>
+<html lang="{{ lang }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f1">
+  <title>{{ meta.title }}</title>
+  <meta name="description" content="{{ meta.description }}">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  {%- if home %}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="{{ t.common.ogLocale }}">
+  <meta property="og:site_name" content="FB-print">
+  <meta property="og:title" content="{{ meta.title }}">
+  <meta property="og:description" content="{{ meta.ogDescription }}">
+  {%- endif %}
+  <link rel="preload" href="assets/fonts/golos-text-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/unbounded-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Тема до первой отрисовки: сохранённый выбор, иначе системная настройка */
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('fb-theme'); } catch (e) { }
+      if (!theme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) theme = 'dark';
+      if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#181143');
+      }
+    })();
+  </script>
+</head>
+
+<body{% if home %} id="top"{% endif %}>
+
+  <a class="skip-link" href="#main">{{ t.common.skip }}</a>
+  {% if home %}
+  <svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="reg" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width="1" />
+        <circle cx="12" cy="12" r="2.6" fill="currentColor" />
+        <path d="M12 0v24M0 12h24" stroke="currentColor" stroke-width="1" />
+      </symbol>
+    </defs>
+  </svg>
+  {% endif %}
+  <div class="cmyk-bar" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  {% include "header.njk" %}
+
+  {{ content }}
+
+  {% include "footer.njk" %}
+  {% if home %}
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FB-print",
+  "description": "{{ meta.orgDescription }}",
+  "email": "{{ site.email }}",
+  "telephone": "{{ site.phoneSchema }}",
+  "areaServed": "RU"
+}
+</script>
+  {% endif %}
+  {#- Надписи для main.js на языке страницы -#}
+  <script type="application/json" id="ui-text">{{ t.ui | dump | replace("{email}", site.email) }}</script>
+  <script src="main.js" defer></script>
+</body>
+
+</html>

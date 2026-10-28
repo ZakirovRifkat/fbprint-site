@@ -1,0 +1,33 @@
+<section class="section section--white" id="tech">
+  <div class="shell">
+    <div class="section__head">
+      <h2>{{ t.tech.title }}</h2>
+      <p class="lead">{{ t.tech.lead }}</p>
+    </div>
+
+    <div class="grid grid--2">
+      {%- for card in t.tech.cards %}
+      <article class="tech-card">
+        <div class="tech-card__top">
+          <span class="tech-card__icon">
+            {% include "icons/" + card.icon + ".svg" %}
+          </span>
+          <span class="tag">{{ card.tag }}</span>
+        </div>
+        <h3 class="tech-card__title">{{ card.title }}</h3>
+        <p>{{ card.text }}</p>
+        <ul class="ticks">
+          {%- for tick in card.ticks %}
+          <li>{% check 18 %}{{ tick }}</li>
+          {%- endfor %}
+        </ul>
+      </article>
+      {%- endfor %}
+    </div>
+
+    <p class="callout">
+      {% include "icons/question.svg" %}
+      {{ t.tech.callout }}
+    </p>
+  </div>
+</section>

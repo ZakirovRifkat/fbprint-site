@@ -1,0 +1,35 @@
+<header class="site-header" data-header>
+  <div class="shell site-header__inner">
+    <a class="brand" href="{{ '#top' if home else './' }}">
+      <img class="brand__mark" src="assets/logo-mark.svg" alt="" width="104" height="46">
+      <span class="brand__text">
+        <span class="brand__name">FB-print</span>
+        <span class="brand__tagline">{{ t.common.brandTagline }}</span>
+      </span>
+      <span class="visually-hidden">{{ t.common.brandHome }}</span>
+    </a>
+{% if home %}
+    <button class="burger" type="button" aria-label="{{ t.header.menuOpen }}" aria-expanded="false" aria-controls="site-menu">
+      <span class="burger__bars" aria-hidden="true"></span>
+    </button>
+
+    <div class="site-menu" id="site-menu">
+      <nav class="site-nav" aria-label="{{ t.header.navLabel }}">
+        {%- for s in t.sections %}
+        <a href="#{{ s.id }}">{{ s.name }}</a>
+        {%- endfor %}
+        <a class="site-nav__order" href="#order">{{ t.header.order }}</a>
+      </nav>
+      <a class="btn btn--ink site-menu__cta" href="#order"><span>{{ t.header.cta }}</span></a>
+    </div>
+{% else %}
+    <a class="doc-back" href="./">
+      {% include "icons/back.svg" %}
+      <span class="doc-back__text">{{ t.header.back }}</span>
+    </a>
+{% endif %}
+    <button class="theme-toggle" type="button" aria-pressed="false" aria-label="{{ t.common.themeDark }}" title="{{ t.common.themeDark }}" data-theme-toggle hidden>
+      {% include "icons/theme.svg" %}
+    </button>
+  </div>
+</header>

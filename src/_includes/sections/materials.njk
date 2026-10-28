@@ -1,0 +1,27 @@
+<section class="section" id="materials">
+  <div class="shell">
+    <div class="section__head">
+      <h2>{{ t.materials.title }}</h2>
+      <p class="lead">{{ t.materials.lead }}</p>
+    </div>
+
+    <div class="grid grid--3">
+      {%- for card in t.materials.cards %}
+      <article class="card peel">
+        <div class="swatches" aria-hidden="true">
+          {%- for s in card.swatches %}
+          <span class="swatch swatch--{{ s }}"></span>
+          {%- endfor %}
+        </div>
+        <h3 class="card__title">{{ card.title }}</h3>
+        <p>{{ card.text }}</p>
+        <ul class="pills">
+          {%- for pill in card.pills %}
+          <li>{{ pill }}</li>
+          {%- endfor %}
+        </ul>
+      </article>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,17 @@
+<section class="benefits" aria-label="{{ t.benefits.label }}">
+  <div class="shell">
+    <ul class="benefits__grid">
+      {%- for b in t.benefits.items %}
+      <li class="benefit">
+        <span class="benefit__icon">
+          {% include "icons/" + b.icon + ".svg" %}
+        </span>
+        <span class="benefit__body">
+          <strong>{{ b.title }}</strong>
+          <span>{{ b.text }}</span>
+        </span>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+</section>

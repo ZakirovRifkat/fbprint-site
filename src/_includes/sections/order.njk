@@ -1,0 +1,119 @@
+{%- set o = t.order -%}
+{%- set f = t.form -%}
+<section class="cta-wrap" id="order" aria-labelledby="order-title">
+  <div class="shell">
+    <div class="cta order">
+      <svg class="cta__mark" viewBox="0 0 120 120" width="120" height="120" fill="none" aria-hidden="true">
+        <circle cx="60" cy="60" r="30" stroke="#FFFFFF" stroke-width="2" fill="none"/>
+        <path d="M60 14v92M14 60h92" stroke="#FFFFFF" stroke-width="2"/>
+      </svg>
+      <div class="order__aside">
+        <h2 class="cta__title" id="order-title">{{ o.title }}</h2>
+        <p class="order__lead">{{ o.lead }}</p>
+        <ol class="order-steps">
+          {%- for step in o.steps %}
+          <li><span class="order-steps__num">0{{ loop.index }}</span><span><strong>{{ step.title }}</strong>{{ step.text }}</span></li>
+          {%- endfor %}
+        </ol>
+        <p class="order__mail">{{ o.mail }} <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+
+      <form class="order-card" action="send.php" method="post" enctype="multipart/form-data" data-form>
+        <input type="hidden" name="form" value="{{ f.subject }}">
+        <div class="hp" aria-hidden="true"><label for="f-website">{{ f.honeypot }}</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+        <div class="order-card__body" data-form-body>
+          <div class="order-card__head">
+            <h3 class="order-card__title">{{ f.title }}</h3>
+            <p>{{ f.intro }}</p>
+          </div>
+
+          <div class="order-card__grid">
+            <div class="field">
+              <label for="f-name">{{ f.name }} <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required placeholder="{{ f.namePlaceholder }}">
+            </div>
+            <div class="field">
+              <label for="f-contact">{{ f.contact }} <span class="req" aria-hidden="true">*</span></label>
+              <input id="f-contact" name="contact" type="text" required placeholder="{{ f.contactPlaceholder }}">
+            </div>
+          </div>
+
+          <fieldset class="order-card__more">
+            <legend class="order-card__group">{{ f.details }} <span>{{ f.optional }}</span></legend>
+            <div class="field">
+              <span class="field__label" id="f-file-label">{{ f.file }}</span>
+              <input class="file-input" id="f-file" name="layout[]" type="file" multiple accept=".pdf,.ai,.eps,.cdr,.svg,.tif,.tiff,.psd,.jpg,.jpeg,.png,.zip,.rar" aria-labelledby="f-file-label">
+              <label class="drop" for="f-file">
+                {% include "icons/upload.svg" %}
+                <span><span class="drop__title">{{ f.fileButton }}</span> <span class="drop__hint" data-file-hint>{{ f.fileHint }}</span></span>
+              </label>
+            </div>
+
+            <div class="field">
+              <label for="f-company">{{ f.company }}</label>
+              <input id="f-company" name="company" type="text" autocomplete="organization" placeholder="{{ f.companyPlaceholder }}">
+            </div>
+
+            <div class="choice" role="group" aria-labelledby="f-product-label">
+              <p class="choice__label" id="f-product-label">{{ f.product }}</p>
+              <div class="choice__opts">
+                {%- for opt in f.products %}
+                <label class="opt"><input type="radio" name="product" value="{{ opt.value }}"><span>{{ opt.label }}</span></label>
+                {%- endfor %}
+              </div>
+            </div>
+
+            <div class="choice" role="group" aria-labelledby="f-material-label">
+              <p class="choice__label" id="f-material-label">{{ f.material }}</p>
+              <div class="choice__opts">
+                {%- for opt in f.materials %}
+                <label class="opt"><input type="radio" name="material" value="{{ opt.value }}"><span>{{ opt.label }}</span></label>
+                {%- endfor %}
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="f-run">{{ f.run }}</label>
+              <input id="f-run" name="run" type="text" placeholder="{{ f.runPlaceholder }}">
+            </div>
+
+            <div class="field">
+              <label for="f-comment">{{ f.comment }}</label>
+              <textarea id="f-comment" name="comment" rows="3" placeholder="{{ f.commentPlaceholder }}"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="consent-group">
+            <label class="consent">
+              <input type="checkbox" name="consent" value="yes" required>
+              <span class="consent__box" aria-hidden="true"></span>
+              <span>{{ f.consent }}</span>
+            </label>
+            <p class="consent-note">{{ f.privacyNote }}</p>
+          </div>
+
+          <div class="order-card__submit">
+            <button class="btn btn--ink btn--lg" type="submit">
+              <span class="btn__label">{{ f.submit }}</span>
+              {% arrow %}
+            </button>
+          </div>
+          <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+        </div>
+
+        <div class="form-sent" data-form-sent tabindex="-1" hidden>
+          <p class="form-sent__title">{{ f.sentTitle }}</p>
+          <p>{{ f.sentText }}<a class="link-underline" href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+        </div>
+
+        <p class="slug" aria-hidden="true">
+          <span>{{ f.slug }}</span>
+          <span class="slug__sign">{{ f.approved }} <span class="slug__line"><img class="slug__stamp" data-stamp src="assets/logo-full.svg" alt="" width="96" height="91" hidden></span></span>
+        </p>
+      </form>
+
+      <span class="cta__bar" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </div>
+  </div>
+</section>

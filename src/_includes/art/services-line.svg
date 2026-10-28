@@ -1,0 +1,22 @@
+<svg class="line__web" viewBox="0 0 1312 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path class="line__path" d="M24 20H1282" stroke="#181143" stroke-width="2.5"/>
+  <path class="line__arrow" d="M1282 11l22 9-22 9z" fill="#181143"/>
+  <circle cx="12" cy="20" r="10" fill="#F6F5F1" stroke="#181143" stroke-width="2.5"/>
+  <circle cx="12" cy="20" r="3.5" fill="#181143"/>
+  <g class="line__node">
+    <circle cx="155" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+    <circle cx="155" cy="20" r="4" fill="#E4007C"/>
+  </g>
+  <g class="line__node">
+    <circle cx="489" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+    <circle cx="489" cy="20" r="4" fill="#E4007C"/>
+  </g>
+  <g class="line__node">
+    <circle cx="823" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+    <circle cx="823" cy="20" r="4" fill="#E4007C"/>
+  </g>
+  <g class="line__node">
+    <circle cx="1157" cy="20" r="11" fill="#FFFFFF" stroke="#181143" stroke-width="2.5"/>
+    <circle cx="1157" cy="20" r="4" fill="#E4007C"/>
+  </g>
+</svg>
